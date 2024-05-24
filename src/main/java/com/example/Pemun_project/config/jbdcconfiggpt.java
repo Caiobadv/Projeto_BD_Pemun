@@ -16,7 +16,7 @@ public class jbdcconfiggpt {
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/PEMUN_DBPROJECT");
         dataSource.setUsername("root");
-        dataSource.setPassword("030701Ab");
+        dataSource.setPassword("Caiodavi1!");
         return dataSource;
     }
 
