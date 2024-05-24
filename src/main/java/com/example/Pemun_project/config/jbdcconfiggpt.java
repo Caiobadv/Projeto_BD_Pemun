@@ -14,7 +14,7 @@ public class jbdcconfiggpt {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/seu_banco_de_dados");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/PEMUN_DBPROJECT");
         dataSource.setUsername("root");
         dataSource.setPassword("Caiodavi1!");
         return dataSource;
