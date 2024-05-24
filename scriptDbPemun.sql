@@ -1,4 +1,4 @@
-CREATE DATABASE PEMUN_DBPROJECT
+-- CREATE DATABASE PEMUN_DBPROJECT
 
 CREATE TABLE Usuario (
 	cpf_user integer PRIMARY KEY,
@@ -34,7 +34,7 @@ CREATE TABLE Delegado (
 
 CREATE TABLE Inscricao (
 	id_inscricao integer PRIMARY KEY,
-	cpf_delegado_inscricao varchar(100), # adicionei isso
+	cpf_delegado_inscricao integer, # adicionei isso
 	id_comite_inscricao integer, # adicionei isso
 	data_inscricao timestamp,
 	valor_inscricao float, # adicionei isso
@@ -49,8 +49,8 @@ CREATE TABLE Inscricao (
 CREATE TABLE Diretor (
 	cpf_diretor integer,
 	id_comite_diretor integer,
-	CONSTRAINT Fk_cpf_user FOREIGN KEY(cpf_diretor) REFERENCES Usuario(cpf_user),
-	CONSTRAINT Fk_id_comite FOREIGN KEY(id_comite_diretor) REFERENCES Comite(id_comite)
+	CONSTRAINT Fk_cpf_user_diretor FOREIGN KEY(cpf_diretor) REFERENCES Usuario(cpf_user),
+	CONSTRAINT Fk_id_comite_diretor FOREIGN KEY(id_comite_diretor) REFERENCES Comite(id_comite)
 );
 
 CREATE TABLE supervisiona (
@@ -77,8 +77,8 @@ CREATE TABLE Pacote (
 CREATE TABLE Produto ( # não entendi pq a gnt precisa disso, por mim deixava em Item
 	id_item_produto integer,
 	cor_produto varchar(50),
-	tamanho varchar(1) #P, M, G ou U(unico)
-	CONSTRAINT Fk_id_item FOREIGN KEY(id_item_produto) REFERENCES Item(id_item)
+	tamanho varchar(1), #P, M, G ou U(unico)
+	CONSTRAINT Fk_id_item_produto FOREIGN KEY(id_item_produto) REFERENCES Item(id_item)
 );
 
 CREATE TABLE Evento (
@@ -100,7 +100,10 @@ CREATE TABLE Ingresso (
 	CONSTRAINT Fk_nome_evento FOREIGN KEY(nome_evento_ingresso) REFERENCES Evento(nome_evento)
 );
 
+-- rodei até aqui
+
 CREATE TABLE Carrinho (
 	id_carrinho integer PRIMARY KEY,
-	
+	valor_total_carrinho integer,
+	qtd_total_itens_carrinho integer # falta os ids dos itens
 );
