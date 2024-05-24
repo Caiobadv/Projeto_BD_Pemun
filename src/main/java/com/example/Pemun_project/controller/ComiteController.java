@@ -26,7 +26,7 @@ public class ComiteController {
         return comite.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping("/comite")
     public ResponseEntity<Comite> createComite(@RequestBody Comite comite) {
         comiteService.createComite(comite);
         return ResponseEntity.ok(comite);
