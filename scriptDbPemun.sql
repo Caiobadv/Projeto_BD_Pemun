@@ -107,3 +107,13 @@ CREATE TABLE Carrinho (
 	valor_total_carrinho integer,
 	qtd_total_itens_carrinho integer # falta os ids dos itens
 );
+
+insert into Usuario (cpf_user,tipo_user,nome_user) values (434343, "secre", "rodrigo");
+
+insert into Comite (id_comite,nome_comite,tipo_comite, tema1_comite) values (32, "pnud", "tec", "hackathon");
+
+INSERT INTO Usuario (cpf_user, tipo_user, nome_user, instituicao_ensino_user, curso_user, login_user, senha_login_user, email_user, telefone_user, rua_endereco_user, numero_endereco_user, bairro_endereco_user, cep_endereco_user, complemento_endereco_user)
+VALUES (323232, 'tipo', 'nome', 'instituicao', 'curso', 'login', 'senha', 'email', 'telefone', 'rua', 'numero', 'bairro', 43432, 'complemento');
+
+INSERT INTO Delegado (cpf_delegado)
+VALUES (323232);
