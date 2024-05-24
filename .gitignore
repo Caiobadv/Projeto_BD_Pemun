@@ -23,10 +23,10 @@
 hs_err_pid*
 replay_pid*
 
-../.idea/
-../target/
+# pastas com configs específicas para cada máquina
+.idea/
+target/
 .DS_Store
 ../jbdcconfiggpt.java
 ../DataBaseConfig.java
 ../application.properties
-
