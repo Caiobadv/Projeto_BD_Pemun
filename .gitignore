@@ -23,6 +23,10 @@
 hs_err_pid*
 replay_pid*
 
-.idea/
-
+../.idea/
+../target/
 .DS_Store
+../jbdcconfiggpt.java
+../DataBaseConfig.java
+../application.properties
+
