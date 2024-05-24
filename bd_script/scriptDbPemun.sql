@@ -127,3 +127,15 @@ CREATE TABLE compra (
 	CONSTRAINT Fk_id_carrinho_compra FOREIGN KEY(id_carrinho_compra) REFERENCES Carrinho(id_carrinho),
 	CONSTRAINT Fk_id_itens_compra FOREIGN KEY(id_itens_compra) REFERENCES Item(id_item)
 );
+
+INSERT INTO Inscricao (id_inscricao, data_inscricao, valor_inscricao, forma_pagamento_inscricao, op1_representacao_inscricao, op2_representacao_inscricao, op3_representacao_inscricao)
+VALUES (10, CURRENT_TIMESTAMP, 100.50, 'Credit Card', 'Representation 1', 'Representation 2', 'Representation 3');
+
+INSERT INTO Usuario (cpf_user, tipo_user, nome_user)
+VALUES (123456, 'A', 'rodrigo');
+
+INSERT INTO Comite (id_comite, nome_comite, tipo_comite, tema1_comite, tema2_comite, descricao_comite, qtd_vagas_comite)
+VALUES (1, 'Nome do Comitê', 'Tipo', 'Tema 1', 'Tema 2', 'Descrição', 10);
+
+INSERT INTO Diretor (cpf_diretor, id_comite_diretor)
+VALUES (123456, 1);
