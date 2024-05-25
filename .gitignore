@@ -30,3 +30,6 @@ target/
 ../jbdcconfiggpt.java
 ../DataBaseConfig.java
 ../application.properties
+target/classes/application.properties
+src/main/java/com/example/Pemun_project/config/DataBaseConfig.java
+src/main/java/com/example/Pemun_project/config/jbdcconfiggpt.java

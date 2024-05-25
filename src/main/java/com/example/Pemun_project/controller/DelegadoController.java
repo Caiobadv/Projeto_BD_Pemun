@@ -15,12 +15,12 @@ public class DelegadoController {
     @Autowired
     private DelegadoService delegadoService;
 
-    @GetMapping("/delegados")
+    @GetMapping("/delegados") // https://localhost:8080/delegados
     public List<Delegado> getAllDelegados() {
         return delegadoService.getAllDelegados();
     }
 
-    @GetMapping("/{cpfD}")
+    @GetMapping("/{cpfD}") // colocar algo antes do cpf, tipo /delegado/cpf
     public ResponseEntity<Delegado> getDelegadoByCpf(@PathVariable Integer cpf) {
         Optional<Delegado> delegado = delegadoService.getDelegadoByCpf(cpf);
         return delegado.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
