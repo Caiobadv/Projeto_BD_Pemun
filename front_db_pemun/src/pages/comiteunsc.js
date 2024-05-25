@@ -20,36 +20,36 @@ import './comiteagnu.css'
 function ComiteUnsc() {
     return (
         <div>
-            <header class="site-header">
-                <div class="header-top">
-                    <img src={LogoVerde} alt="Logo PEMUN" class="logo"/> 
-                    <nav class="navigation">
-                        <ul class="navigation-list">
-                        <li class="navigation-item"><a href="index.html" class="navigation-link">Home</a></li>
-                        <li class="navigation-item"><a href="edicao.html" class="navigation-link">Edição VI</a></li>
-                        <li class="navigation-item"><a href="arquivos.html" class="navigation-link">Arquivos</a></li> 
-                        <li class="navigation-item"><a href="staff.html" class="navigation-link">Staff</a></li>
+            <header className="site-header">
+                <div className="header-top">
+                    <img src={LogoVerde} alt="Logo PEMUN" className="logo"/> 
+                    <nav className="navigation">
+                        <ul className="navigation-list">
+                        <li className="navigation-item"><a href="index.html" className="navigation-link">Home</a></li>
+                        <li className="navigation-item"><a href="edicao.html" className="navigation-link">Edição VI</a></li>
+                        <li className="navigation-item"><a href="arquivos.html" className="navigation-link">Arquivos</a></li> 
+                        <li className="navigation-item"><a href="staff.html" className="navigation-link">Staff</a></li>
                         </ul>
                     </nav>
-                    <a  href="https://linktr.ee/Pemun" class="button contato-button">Contato</a>
+                    <a  href="https://linktr.ee/Pemun" className="button contato-button">Contato</a>
                 </div>
             </header>
             <main>
-                <section class="comite-section">
-                <div class="comite-header">
-                    <img src={UnscLogo} alt="Logo Comité" class="comite-logo"/>
-                    <div class="comite-title">
+                <section className="comite-section">
+                <div className="comite-header">
+                    <img src={UnscLogo} alt="Logo Comité" className="comite-logo"/>
+                    <div className="comite-title">
                     <h1>United Nations Security Council</h1>
                     <h2>Topic A: The weaponization of technology in armed conflicts</h2>
                     <h2>Topic B: The situation in Central Sahel</h2>
-                    <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" class="button guia-button">Inscreva-se</a>
-                    <div class="comite-buttons">
-                        <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" class="button guia-button">Study Guide</a>
-                        <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" class="button guia-button">Annex Guide</a>
+                    <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" className="button guia-button">Inscreva-se</a>
+                    <div className="comite-buttons">
+                        <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" className="button guia-button">Study Guide</a>
+                        <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" className="button guia-button">Annex Guide</a>
                     </div>
                     </div>
                 </div>
-                <div class="comite-summary">
+                <div className="comite-summary">
                     <h3>Committee Summary</h3>
                     <p>The weaponization of technology — an ongoing progress, ever since the late century — marks a transformative shift in the dynamics of global power, as it reshapes the nature of conflicts and international peace. Rapid advancements in technology have not only accelerated progress and instigated a new way of observing conflicts, but also opened new barriers for teasing and pushing the limits of war and the peak of usage of violence. From cyberspace to artificial intelligence, and even outer space, the convergence of “cutting-edge” technologies has catalysed a situation where innovation holds immense potential not just for progress, but also, and mainly, for disruption and conflict.
             
@@ -57,9 +57,9 @@ function ComiteUnsc() {
                     
                     Likewise, the second topic will put a spotlight on an often forgotten and less talked region, at the center of one of the most cruel, continuous conflicts of contemporary history, happenimg in the countries of Burkina Faso, Mali, and Niger. The debate will open towards matters involving climate change and environmental disruption, hunger, extreme poverty, displacement, economical crisis, armed conflicts, and socio-political issues that contemplate antidemocratic and imperialistic tendencies as a colonialism heritage.</p>
                 </div>
-                <div class="comite-representaciones">
+                <div className="comite-representaciones">
                     <h2>Representations</h2>
-                    <ul class="representaciones-list">
+                    <ul className="representaciones-list">
                     <li>United Kingdom of Great Britain and Northern Ireland</li>
                     <li>French Republic</li>
                     <li>People's Republic of China</li>
@@ -86,40 +86,40 @@ function ComiteUnsc() {
                     <li>Ukraine</li>
                     </ul>
                 </div>
-                <div class="comite-directoria">
+                <div className="comite-directoria">
                     <h2>Board of Directors</h2>
-                    <div class="directoria-members">
-                    <div class="member">
+                    <div className="directoria-members">
+                    <div className="member">
                         <img src={AliciaMaximo} alt="Alícia Máximo"/>
                         <h3>Alicia Máximo</h3>
                     </div>
-                    <div class="member">
+                    <div className="member">
                         <img src={IsadoraBatista} alt="Isadora Batista"/>
                         <h3>Isadora Magalhães</h3>
                     </div>
-                    <div class="member">
+                    <div className="member">
                         <img src={LuccaLimongi} alt="Lucca Limongi"/>
                         <h3>Lucca Limongi</h3>
                     </div>
-                    <div class="member">
+                    <div className="member">
                         <img src={MariaHuergo} alt="Maria Fernanda Huergo"/>
                         <h3>Maria Fernanda Huergo</h3>
                     </div>
-                    <div class="member">
+                    <div className="member">
                         <img src={RaviAlmeida} alt="Ana Luisa Porpino"/>
                         <h3>Ravi Almeida</h3>
                     </div>
                     </div>
                 </div>
-                <div class="tutores-section">
+                <div className="tutores-section">
                     <h2>Tutors</h2>
                     <p>Members of the Secretariat, Alumini and guests who guided the preparation of the Committee.</p>
-                    <div class="tutores-container">
-                    <div class="tutor">
+                    <div className="tutores-container">
+                    <div className="tutor">
                         <img src={GabrielBotelho} alt="Gabriel Botelho"/>
                         <p>Gabriel Botelho</p>
                     </div>
-                    <div class="tutor">
+                    <div className="tutor">
                         <img src={ClaraFerraz} alt="Maria Clara Ferraz"/>
                         <p>Maria Clara Ferraz</p>
                     </div>
@@ -127,20 +127,20 @@ function ComiteUnsc() {
                 </div>
                 </section>
             </main>
-            <footer class="site-footer">
-                <div class="footer-content">
-                <div class="footer-logo-socials">
-                    <img src={LogoVerde} alt="Logo PEMUN" class="footer-logo"/>
-                    <div class="social-icons">
-                    <a href="https://www.instagram.com/pernambucomun/" class="social-icon"><img src={insta} alt="Instagram"/></a>
-                    <a href="mailto:pernambucomun@gmail.com" class="social-icon"><img src={email} alt="email"/></a>
-                    <a href="https://linktr.ee/Pemun" class="social-icon"><img src={linktree} alt="Linktree"/></a>
+            <footer className="site-footer">
+                <div className="footer-content">
+                <div className="footer-logo-socials">
+                    <img src={LogoVerde} alt="Logo PEMUN" className="footer-logo"/>
+                    <div className="social-icons">
+                    <a href="https://www.instagram.com/pernambucomun/" className="social-icon"><img src={insta} alt="Instagram"/></a>
+                    <a href="mailto:pernambucomun@gmail.com" className="social-icon"><img src={email} alt="email"/></a>
+                    <a href="https://linktr.ee/Pemun" className="social-icon"><img src={linktree} alt="Linktree"/></a>
                     </div>
                 </div>
                 
-                <div class="footer-credits">
+                <div className="footer-credits">
                     <p>Designed and Developed by Ana Beatriz Alves e Caio Barreto</p>
-                    <p class="cor-verde">© Copyright 2024, All Rights Reserved by PEMUN</p>
+                    <p className="cor-verde">© Copyright 2024, All Rights Reserved by PEMUN</p>
                 </div>
                 </div>
             </footer>

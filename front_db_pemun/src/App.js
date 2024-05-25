@@ -10,6 +10,7 @@ import ComiteTpi from './pages/comitecii';
 import ComiteUnche from './pages/comiteunche';
 import ComiteUnsc from './pages/comiteunsc';
 import ComiteCorte from './pages/comitecorte';
+import ComiteEscap from './pages/comiteescap';
 
 import './App.css';
 
@@ -28,7 +29,7 @@ function App() {
             <Route exact path='/comiteunche' element={<ComiteUnche/>}/>
             <Route exact path='/comiteunsc' element={<ComiteUnsc/>}/>
             <Route exact path='/comitecorte' element={<ComiteCorte/>}/>
-
+            <Route exact path='/comiteescap' element={<ComiteEscap/>}/>
           </Routes>
         </Router>
       </div>

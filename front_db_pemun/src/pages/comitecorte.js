@@ -21,36 +21,36 @@ import './comiteagnu.css'
 function ComiteCorte(){
     return(
         <div>
-              <header class="site-header">
-                <div class="header-top">
-                <img src={LogoVerde} alt="Logo PEMUN" class="logo"/> 
-                <nav class="navigation">
-                    <ul class="navigation-list">
-                    <li class="navigation-item"><a href="index.html" class="navigation-link">Home</a></li>
-                    <li class="navigation-item"><a href="edicao.html" class="navigation-link">Edição VI</a></li>
-                    <li class="navigation-item"><a href="arquivos.html" class="navigation-link">Arquivos</a></li> 
-                    <li class="navigation-item"><a href="staff.html" class="navigation-link">Staff</a></li>
+              <header className="site-header">
+                <div className="header-top">
+                <img src={LogoVerde} alt="Logo PEMUN" className="logo"/> 
+                <nav className="navigation">
+                    <ul className="navigation-list">
+                    <li className="navigation-item"><a href="index.html" className="navigation-link">Home</a></li>
+                    <li className="navigation-item"><a href="edicao.html" className="navigation-link">Edição VI</a></li>
+                    <li className="navigation-item"><a href="arquivos.html" className="navigation-link">Arquivos</a></li> 
+                    <li className="navigation-item"><a href="staff.html" className="navigation-link">Staff</a></li>
                     </ul>
                 </nav>
-                <a  href="https://linktr.ee/Pemun" class="button contato-button">Contato</a>
+                <a  href="https://linktr.ee/Pemun" className="button contato-button">Contato</a>
                 </div>
             </header>
             <main>
-                <section class="comite-section">
-                <div class="comite-header">
-                    <img src={LogoCorte} alt="Logo Comité" class="comite-logo"/>
-                    <div class="comite-title">
+                <section className="comite-section">
+                <div className="comite-header">
+                    <img src={LogoCorte} alt="Logo Comité" className="comite-logo"/>
+                    <div className="comite-title">
                     <h1>Corte Interamericana de Direitos Humanos</h1>
                     <h2>Tópico A: Caso Trabalhadores da Fazenda Brasil Verde vs. Brasil</h2>
                     <h2>Tópico B: Caso Airton Honorato e Outros vs. Brasil</h2>
-                    <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" class="button guia-button">Inscreva-se</a>
-                    <div class="comite-buttons">
-                    {/* <!--  <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" class="button guia-button">Study Guide</a>
-                        <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" class="button guia-button">Annex Guide</a> --> */}
+                    <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" className="button guia-button">Inscreva-se</a>
+                    <div className="comite-buttons">
+                    {/* <!--  <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" className="button guia-button">Study Guide</a>
+                        <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" className="button guia-button">Annex Guide</a> --> */}
                     </div>
                     </div>
                 </div>
-                <div class="comite-summary">
+                <div className="comite-summary">
                     <h3>Resumo do Comitê</h3>
                     <p>A Corte Interamericana de Direitos Humanos (Corte IDH) é um dos três tribunais regionais de proteção dos direitos humanos, fazendo parte do Sistema Interamericano de Direitos Humanos (SIDH), com objetivo de aplicar e interpretar a Convenção Americana, ou Pacto de São José da Costa Rica, conferindo condições para que todos os cidadãos americanos possam usufruir de seus direitos civis, políticos, culturais, sociais e econômicos. Atuando em conjunto com a Comissão Americana de Direitos Humanos (CADH), a Corte IDH recebe denúncias dos países membros e julga-as de acordo com os artigos da Convenção Americana, defendendo as instituições democráticas, os direitos dos seres humanos e a justiça social.
 
@@ -61,9 +61,9 @@ function ComiteCorte(){
                         
                         Diante desse cenário, é interessante observar que os casos revelam problemas reais e estruturais, nos quais é explícito a urgência da discussão sobre os temas que se desenvolveram ao longo da história e pesam na atualidade. Assim como, é imprescindível que este seja realizado com foco no tema de direitos humanos, mediados pela atuação da Corte IDH, não só pela sua importância enquanto órgão, mas principalmente por sua fundamentalidade no debate internacional que versa sobre direitos humanos e a aplicação prática dos tratados que buscam sustentá-lo a nível mundial.</p>
                 </div>
-                <div class="comite-representaciones">
+                <div className="comite-representaciones">
                     <h2>Representações</h2>
-                    <ul class="representaciones-list">
+                    <ul className="representaciones-list">
                     <li>7 (sete) Magistrados:
 
                         1 Presidente;
@@ -73,48 +73,48 @@ function ComiteCorte(){
                     <li>6 (seis) Advogados(as) de Defesa</li>
                     </ul>
                 </div>
-                <div class="comite-directoria">
+                <div className="comite-directoria">
                     <h2>Diretoria</h2>
-                    <div class="directoria-members">
-                    <div class="member">
+                    <div className="directoria-members">
+                    <div className="member">
                         <img src={BeatrizMiranda} alt="Beatriz Miranda"/>
                         <h3>Beatriz Miranda</h3>
                     </div>
-                    <div class="member">
+                    <div className="member">
                         <img src={CamilaFairstein} alt="Camila Fairstein"/>
                         <h3>Camila Fairstein</h3>
                     </div>
-                    <div class="member">
+                    <div className="member">
                         <img src={DanielaOliveira} alt="Daniela Oliveira"/>
                         <h3>Daniela Oliveira</h3>
                     </div>
-                    <div class="member">
+                    <div className="member">
                         <img src={LeticiaRodrigues} alt="Letícia Rodrigues"/>
                         <h3>Letícia Rodrigues</h3>
                     </div>
-                    <div class="member">
+                    <div className="member">
                         <img src={LuanaFerraz} alt="Luana Ferraz"/>
                         <h3>Luana Ferraz</h3>
                     </div>
-                    <div class="member">
+                    <div className="member">
                         <img src={MariaLuisaLeite} alt="Maria Luisa Leite"/>
                         <h3> Maria Luisa Leite</h3>
                     </div>
-                    <div class="member">
+                    <div className="member">
                         <img src={Nycolle} alt="Nycolle Monteiro"/>
                         <h3>Nycolle Monteiro</h3>
                     </div>
                     </div>
                 </div>
-                <div class="tutores-section">
+                <div className="tutores-section">
                     <h2>Tutores</h2>
                     <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
-                    <div class="tutores-container">
-                    <div class="tutor">
+                    <div className="tutores-container">
+                    <div className="tutor">
                         <img src={MariaClaraFerraz} alt="Maria Clara Ferraz"/>
                         <p>Maria Clara Ferraz</p>
                     </div>
-                    <div class="tutor">
+                    <div className="tutor">
                         <img src={VitoriaSouza} alt="Vitória Sousa"/>
                         <p>Vitória Sousa</p>
                     </div>
@@ -122,20 +122,20 @@ function ComiteCorte(){
                 </div>
                 </section>
             </main>
-            <footer class="site-footer">
-                <div class="footer-content">
-                <div class="footer-logo-socials">
-                    <img src={LogoVerde} alt="Logo PEMUN" class="footer-logo"/>
-                    <div class="social-icons">
-                    <a href="https://www.instagram.com/pernambucomun/" class="social-icon"><img src={insta} alt="Instagram"/></a>
-                    <a href="mailto:pernambucomun@gmail.com" class="social-icon"><img src={email} alt="email"/></a>
-                    <a href="https://linktr.ee/Pemun" class="social-icon"><img src={linktree} alt="Linktree"/></a>
+            <footer className="site-footer">
+                <div className="footer-content">
+                <div className="footer-logo-socials">
+                    <img src={LogoVerde} alt="Logo PEMUN" className="footer-logo"/>
+                    <div className="social-icons">
+                    <a href="https://www.instagram.com/pernambucomun/" className="social-icon"><img src={insta} alt="Instagram"/></a>
+                    <a href="mailto:pernambucomun@gmail.com" className="social-icon"><img src={email} alt="email"/></a>
+                    <a href="https://linktr.ee/Pemun" className="social-icon"><img src={linktree} alt="Linktree"/></a>
                     </div>
                 </div>
                 
-                <div class="footer-credits">
+                <div className="footer-credits">
                     <p>Designed and Developed by Ana Beatriz Alves e Caio Barreto</p>
-                    <p class="cor-verde">© Copyright 2024, All Rights Reserved by PEMUN</p>
+                    <p className="cor-verde">© Copyright 2024, All Rights Reserved by PEMUN</p>
                 </div>
                 </div>
             </footer>
