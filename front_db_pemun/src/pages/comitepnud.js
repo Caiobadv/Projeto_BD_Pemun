@@ -6,7 +6,7 @@ import PnudLogo from '../Images/pnud-removebg-preview.png';
 import VirnaAmaral from '../Images/Virna Amaral.jpg';
 import FernandaMarques from '../Images/Maria Marques.jpeg';
 import RafaelAlves from '../Images/IMG_7971 - Rafael Alves.jpeg';
-import FlavioMuniz from '../Images/FLÃVIO ROMERO SANTOS DE SÃ MUNIZ.jpeg';
+import FlavioMuniz from '../Images/FLÃVIO ROMERO SANTOS DE SÃ MUNIZ.jpeg';
 import MariliaLascio from '../Images/Marilia Di Lascio.jpeg';
 
 import CaioBarreto from '../Images/Caio Barreto.jpeg';
