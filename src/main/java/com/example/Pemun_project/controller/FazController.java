@@ -20,7 +20,7 @@ public class FazController {
         return fazService.getAllFaz();
     }
 
-    @GetMapping("/{cpfDelegado}/{idComite}/{idInscricao}")
+    @GetMapping("/faz/{cpfDelegado}/{idComite}/{idInscricao}")
     public ResponseEntity<Faz> getFazById(@PathVariable Integer cpfDelegado, @PathVariable Integer idComite, @PathVariable Integer idInscricao) {
         Optional<Faz> faz = fazService.getFazById(cpfDelegado, idComite, idInscricao);
         return faz.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
@@ -32,7 +32,7 @@ public class FazController {
         return ResponseEntity.ok(faz);
     }
 
-    @PutMapping("/{cpfDelegado}/{idComite}/{idInscricao}")
+    @PutMapping("/faz/{cpfDelegado}/{idComite}/{idInscricao}")
     public ResponseEntity<Faz> updateFaz(@PathVariable Integer cpfDelegado, @PathVariable Integer idComite, @PathVariable Integer idInscricao, @RequestBody Faz fazDetails) {
         Optional<Faz> faz = fazService.getFazById(cpfDelegado, idComite, idInscricao);
         if (faz.isPresent()) {
@@ -46,7 +46,7 @@ public class FazController {
         }
     }
 
-    @DeleteMapping("/{cpfDelegado}/{idComite}/{idInscricao}")
+    @DeleteMapping("/faz/{cpfDelegado}/{idComite}/{idInscricao}")
     public ResponseEntity<Void> deleteFaz(@PathVariable Integer cpfDelegado, @PathVariable Integer idComite, @PathVariable Integer idInscricao) {
         Optional<Faz> faz = fazService.getFazById(cpfDelegado, idComite, idInscricao);
         if (faz.isPresent()) {
