@@ -10,7 +10,7 @@ import MariaGabriela from '../Images/IMG_8557- Maria Gabriela.jpeg';
 import PhillipeJoseph from '../Images/Phillipe joseph Lavergne.jpg';
 
 import GabrielBotelho from '../Images/IMG_8770 - Gabriel Botelho.jpeg';
-import HelenaMendes from '../mages/IMG_8627 - Helena Mendes.jpeg';
+import HelenaMendes from '../Images/IMG_8627 - Helena Mendes.jpeg';
 import RafaellaAlmeida from '../Images/WhatsApp Image 2024-05-03 at 16.59.59.jpeg';
 
 import insta from '../Images/insta.png';
