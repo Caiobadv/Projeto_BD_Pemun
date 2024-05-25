@@ -139,7 +139,7 @@ function ComiteUnsc() {
                 </div>
                 
                 <div className="footer-credits">
-                    <p>Designed and Developed by Ana Beatriz Alves e Caio Barreto</p>
+                    <p>Designed and Developed by Ana Beatriz Alves, Caio Barreto e Virna Amaral</p>
                     <p className="cor-verde">© Copyright 2024, All Rights Reserved by PEMUN</p>
                 </div>
                 </div>

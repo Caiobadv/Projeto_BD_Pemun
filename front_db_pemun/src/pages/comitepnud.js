@@ -62,7 +62,7 @@ function ComitePnud() {
                         Durante o evento, terão contato com desafios multidisciplinares, ao trabalharem em áreas abrangentes como paz e justiça, igualdade, prosperidade econômica e preservação do meio ambiente, e equipes diversas, formadas por pessoas de diferentes áreas de expertise, para promover abordagens inovadoras e abrangentes.</p>
                 </div>
                 <div class="comite-representaciones">
-                    <h2>Representaciones</h2>
+                    <h2>Representações</h2>
                     <ul class="representaciones-list">
                     <li>Equipe Paz: 5 Delegados;</li>
                     <li>Equipe Prosperidade: 5 Delegados;</li>
@@ -127,7 +127,7 @@ function ComitePnud() {
                 </div>
                 
                 <div class="footer-credits">
-                    <p>Designed and Developed by Ana Beatriz Alves e Caio Barreto</p>
+                    <p>Designed and Developed by Ana Beatriz Alves, Caio Barreto e Virna Amaral</p>
                     <p class="cor-verde">© Copyright 2024, All Rights Reserved by PEMUN</p>
                 </div>
                 </div>
