@@ -151,3 +151,57 @@ VALUES (123456, 789012);
 
 INSERT INTO Item (id_item, nome_item, qtd_total_item, descricao_item, preco_item)
 VALUES (11, 'Item Exemplo', 100, 'Descrição do item exemplo', 10.99);
+
+
+INSERT INTO Usuario (cpf_user, tipo_user, nome_user, instituicao_ensino_user, curso_user, login_user, senha_login_user, email_user, telefone1_user, telefone2_user, rua_endereco_user, numero_endereco_user, bairro_endereco_user, cep_endereco_user, complemento_endereco_user)
+VALUES (123456789, 'D', 'João Silva', 'Universidade XYZ', 'Engenharia', 'joaosilva', 'senha123', 'joao.silva@exemplo.com', '123456789', '987654321', 'Rua A', '123', 'Bairro B', 12345678, 'Apto 1');
+
+INSERT INTO Usuario (cpf_user, tipo_user, nome_user, instituicao_ensino_user, curso_user, login_user, senha_login_user, email_user, telefone1_user, telefone2_user, rua_endereco_user, numero_endereco_user, bairro_endereco_user, cep_endereco_user, complemento_endereco_user)
+VALUES (987654321, 'A', 'João Silva', 'Universidade XYZ', 'Engenharia', 'joaosilva', 'senha123', 'joao.silva@exemplo.com', '123456789', '987654321', 'Rua A', '123', 'Bairro B', 12345678, 'Apto 1');
+
+INSERT INTO Comite (id_comite, nome_comite, tipo_comite, tema1_comite, tema2_comite, descricao_comite, qtd_vagas_comite)
+VALUES (2, 'Comitê de Tecnologia', 'Tecnologia', 'IA e Machine Learning', 'Cibersegurança', 'Discussões sobre avanços tecnológicos', 50);
+
+INSERT INTO Delegado (cpf_delegado)
+VALUES (123456789);
+
+INSERT INTO Inscricao (id_inscricao, data_inscricao, valor_inscricao, forma_pagamento_inscricao, op1_representacao_inscricao, op2_representacao_inscricao, op3_representacao_inscricao)
+VALUES (2, '2024-05-25 10:00:00', 100.00, 'Cartão', 'Brasil', 'EUA', 'China');
+
+INSERT INTO faz (cpf_delegado_inscricao_faz, id_comite_inscricao_faz, id_inscricao_faz)
+VALUES (123456789, 2, 2);
+
+INSERT INTO Diretor (cpf_diretor, id_comite_diretor)
+VALUES (123456789, 2);
+
+INSERT INTO Diretor (cpf_diretor, id_comite_diretor)
+VALUES (987654321, 2);
+
+INSERT INTO supervisiona (cpf_diretor_supervisor, cpf_diretor_supervisionado)
+VALUES (123456789, 987654321);
+
+INSERT INTO Item (id_item, nome_item, qtd_total_item, descricao_item, preco_item)
+VALUES (2, 'Camisa', 100, 'Camisa oficial do evento', 50.00);
+
+INSERT INTO Pacote (id_item_pacote)
+VALUES (2);
+
+INSERT INTO Produto (id_item_produto, cor_produto, tamanho)
+VALUES (2, 'Azul', 'M');
+
+INSERT INTO contem (id_pacote_contem, id_item_contido)
+VALUES (2, 2);
+
+INSERT INTO Evento (nome_evento, data_evento, descricao_evento, rua_endereco_evento, numero_endereco_evento, bairro_endereco_evento, cep_endereco_evento, complemento_endereco_evento)
+VALUES ('Evento de Tecnologia', '2024-06-10 09:00:00', 'Evento sobre tecnologia e inovação', 'Rua B', '456', 'Bairro C', 87654321, 'Sala 2');
+
+INSERT INTO Ingresso (id_produto_ingresso, nome_evento_ingresso, data_compra_ingresso)
+VALUES (2, 'Evento de Tecnologia', '2024-05-20 14:00:00');
+
+INSERT INTO Carrinho (id_carrinho, valor_total_carrinho, qtd_total_itens_carrinho)
+VALUES (2, 150.00, 3);
+
+INSERT INTO compra (qtd_itens_compra, cpf_user_compra, id_carrinho_compra, id_itens_compra)
+VALUES (3, 123456789, 2, 2);
+
+
