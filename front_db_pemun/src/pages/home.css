@@ -177,6 +177,11 @@ img {
   padding: 50px 20px;
 }
 
+.about-text {
+  text-align: left;
+  padding: 50px 20px;
+}
+
 .about-text h2 {
   color: #055F0E;
   margin-bottom: 25px;
@@ -233,6 +238,7 @@ img {
   display: flex;
   justify-content: space-around; /* Espaçamento entre as colunas */
   align-items: start; /* Alinha os itens ao topo */
+  padding: 15px;
 }
 
 .mission-column {
