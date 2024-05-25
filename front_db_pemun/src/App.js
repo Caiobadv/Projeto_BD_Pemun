@@ -12,8 +12,9 @@ import ComitePnud from './pages/comitepnud';
 import ComiteTpi from './pages/comitetpi';
 import ComiteUnche from './pages/comiteunche';
 import ComiteUnsc from './pages/comiteunsc';
-import Edicao from './pages/edicao';
 import ComiteOnu from './pages/comiteonu';
+import Edicao from './pages/edicao';
+import Staff from './pages/staff';
 
 import './App.css';
 
@@ -34,8 +35,9 @@ function App() {
             <Route exact path='/comitetpi' element={<ComiteTpi/>}/>
             <Route exact path='/comiteunche' element={<ComiteUnche/>}/>
             <Route exact path='/comiteunsc' element={<ComiteUnsc/>}/>
-            <Route exact path='/edicao' element={<Edicao/>}/>
             <Route exact path='/comiteonu' element={<ComiteOnu/>}/>
+            <Route exact path='/edicao' element={<Edicao/>}/>
+            <Route exact path='/staff' element={<Staff/>}/>
           </Routes>
         </Router>
       </div>
