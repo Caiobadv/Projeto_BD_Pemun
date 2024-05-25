@@ -1,0 +1,480 @@
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 20px; /* Espaçamento entre os itens */
+  }
+  
+  /* Estilo dos links do cabeçalho */
+  .navigation-link {
+    color: rgb(23, 23, 23); /* Define a cor do texto para preto */
+    text-decoration: none; /* Remove o sublinhado */
+  }
+  
+  /* Efeito ao passar o mouse */
+  .navigation-link:hover {
+    text-decoration: underline;
+    font-weight: bold; /* Deixa o texto em negrito */
+  }
+  
+  /* Estilo básico dos botões */
+  button {
+    background-color: #055F0E; /* Cor de fundo */
+    border: none;
+    color: orange; /* Cor do texto */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px; /* Bordas arredondadas */
+    transition: box-shadow 0.3s ease; /* Suaviza a transição do brilho */
+  }
+
+  .button.contato-button {
+    background-color: #055F0E; /* Um verde vivo, ajuste o código de cor conforme desejar */
+    color: white; /* Ajusta a cor do texto para branco para melhor contraste */
+}
+  
+  button:hover {
+    box-shadow: 0 0 15px yellow;
+  }
+  
+  .access-button {
+    display: inline-block;
+    background-color: #FAEBD7;
+    color: #055F0E;
+    padding: 15px 32px;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  .content-below-image .access-button {
+    background-color: #FAEBD7; /* Cor rosa pálido */
+    color: #333; /* Cor do texto, se necessário */
+}
+
+  /* Reset básico para remover estilos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilizando o cabeçalho */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.navigation-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.navigation-item {
+  margin: 0 10px;
+}
+
+.navigation-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.contato-button {
+  text-decoration: none;
+  background-color: #055F0E;
+  color: #055F0E; 
+  padding: 20px 40px;
+  font-size: 18px; /* Aumenta o tamanho da fonte */
+  border-radius: 15px;
+  transition: background-color 0.3s;
+}
+
+.contato-button:hover {
+  background-color: #055F0E;
+}
+ 
+
+.intro-section {
+  position: relative;
+  text-align: center; /* Center the text */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%; /* This will set the overlay height to cover only 50% of the image from the bottom */
+  bottom: 0; /* Align the overlay to the bottom of the container */
+  background: #055F0E; /* Adjust the color and opacity to match your green overlay */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-end; /* Align the content to the bottom */
+  padding-bottom: 100px; /* Adjust this value to move the content higher up from the bottom */
+}
+  
+.content-below-image {
+  position: absolute; /* This positions the content absolutely within its parent */
+  bottom: -100px; /* Negative value to move the content up */
+  left: 0; /* Aligns the content to the left of the parent */
+  right: 0; /* Aligns the content to the right of the parent */
+  color: white; /* Change the text color as needed */
+  text-align: center; /* Centers the text horizontally */
+  padding: 20px 0; /* Adds padding inside the green area */
+  margin-top: 50px; /* Adjust this value to move the content down */
+
+}
+
+.overlay-content {
+  color: white; /* Adjust text color as needed */
+  z-index: 10;
+  /* Add additional styling as needed */
+}
+
+/* Style for the button */
+.button {
+  background-color: #ffffff; /* Button background color */
+  color: #000000; /* Text color */
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  /* Add more styling as needed */
+}
+
+/* carrosseis quem somos */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.about-text h2 {
+  color: #055F0E;
+  margin-bottom: 25px;
+}
+
+.about-text h1 {
+  margin-bottom: 15px;}
+
+.about-text .about-paragraph {
+    margin-bottom: 30px;
+}
+.about-text .edicoes-passadas {
+  color: #055F0E;
+}
+
+.about-image {
+  width: 50%; 
+  height: auto;
+  background: url('Images/Imagem1Carrosel.JPG') no-repeat center center;
+  background-size: cover;
+}
+
+.about-carousel {
+  max-width: 50%;
+}
+
+.carousel {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.carousel-cell {
+  width: 100%; /* Largura das células */
+  margin-right: 10px; /* Espaçamento entre as células */
+  border-radius: 5px; /* Borda arredondada */
+  counter-reset: none; /* Reseta o contador */
+}
+
+.carousel-cell img {
+  width: 50%; /* Tamanho da imagem */
+  display: block; /* Centraliza a imagem */
+  border-radius: 5px; /* Borda arredondada */
+}
+/* nossa missao */
+.mission-section {
+  text-align: center; /* Centraliza o texto */
+}
+
+.cor-verde {
+  color: #055F0E;
+}
+
+.mission-columns {
+  display: flex;
+  justify-content: space-around; /* Espaçamento entre as colunas */
+  align-items: start; /* Alinha os itens ao topo */
+}
+
+.mission-column {
+  width: 30%; /* Define a largura de cada coluna como 1/3 do contêiner pai */
+  padding: 10px; /* Adiciona um pouco de espaço dentro de cada coluna */
+  box-sizing: border-box; /* Garante que o padding não adicione largura adicional */
+}
+
+.mission-column img {
+  width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner .mission-column */
+  height: auto; /* Garante que a altura da imagem se ajuste para manter a proporção */
+  object-fit: cover; /* Faz a imagem cobrir o espaço disponível, podendo cortar um pouco se necessário */
+  display: block; /* Remove espaços extras abaixo da imagem */
+}
+
+.mission-column h3 {
+  margin-top: 10px; /* Espaço entre a imagem e o título da coluna */
+}
+
+.mission-column p {
+  margin-top: 5px; /* Espaço entre o título da coluna e o texto */
+}
+
+.mission-stats {
+  background-color: #055F0E; /* ou qualquer código de cor verde que você preferir */
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.stat h3 {
+  margin: 0;
+  font-size: 2.5em; /* Ajuste o tamanho da fonte se necessário */
+}
+
+.stat p {
+  margin: 5px 0 0;
+  font-size: 1.2em; /* Ajuste o tamanho da fonte se necessário */
+}
+
+/* Contador */
+
+.countdown-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinha os itens ao topo */
+  gap: 20px; /* Espaço entre o texto e o contador */
+}
+
+.countdown-text {
+  margin-right: 100px;
+  margin-top: 50px;
+}
+
+.countdown-text h3 {
+  text-align: left; /* Isso vai alinhar o texto à esquerda */
+}
+
+.countdown-timer {
+  display: flex;
+  flex-direction: row; /* Isso garante que os itens se alinhem horizontalmente */
+  justify-content: center; /* Isso centraliza os itens na horizontal */
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
+.additional-text {
+  margin-top: 1px; /* Espaço entre o contador e o texto adicional */
+}
+
+.time-box {
+  border-radius: 5px; /* Borda arredondada */
+  padding: 10px;
+  width: 100px; /* Largura dos blocos de tempo */
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Sombra para dar profundidade */
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.time-number {
+  font-size: 2em;
+  display: block;
+}
+
+.time-label {
+  font-size: 1em;
+  color: #333333; /* Cor do texto dos rótulos */
+}
+
+.access-button {
+  display: inline-block;
+  background-color: #055F0E; /* Cor de fundo do botão */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none; /* Remove o sublinhado do link */
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Animação suave de cor de fundo */
+}
+
+.access-button:hover {
+  background-color: #367c2b; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.align-text{
+  margin-top: 100px;
+}
+
+.date-announcement {
+  text-align: left;
+  margin: 1Opx 0;
+}
+
+.countdown-wrapper {
+  margin-top: 20px; /* Adjust the value as needed */
+}
+
+.partners-section {
+  padding: 20px;
+}
+
+.partners-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.partners-logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.partners-logos a {
+  display: inline-block;
+  margin: 20px;  /* Ajusta a margem ao redor de cada logo */
+}
+
+.partner img {
+  max-width: 100px; /* Ou o tamanho de sua preferência */
+  height: auto;
+}
+
+/* Rodapé */
+
+
+.site-footer {
+  padding: 10px 20px;
+  margin: 0 auto;
+  text-align: left;
+  background: #f4f4f4;
+}
+
+
+.footer-content, .footer-logo-socials, .footer-credits {
+  padding: 5px 10px;  /* Ajusta o padding desses elementos se necessário */
+  margin: 0;  /* Remove margens extras */
+}
+
+.footer-logo-socials .social-icon img {
+  width: 50px; /* ou o tamanho que desejar */
+  height: auto; /* mantém a proporção da imagem */
+}
+
+
+.footer-logo-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  width: 150px;
+  height: auto;
+  margin-left: 30px;
+}
+
+.footer-credits {
+  text-align: right;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 10px;   
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+}
+
+.footer-nav {
+  position: absolute;
+  top: 10px; /* Ajuste conforme necessário */
+  right: 10px; /* Ajuste conforme necessário */
+  display: flex; /* Isso garantirá que os links fiquem um ao lado do outro */
+}
+
+.footer-nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333333; /* Cor do texto dos links */
+}
+
+.footer-logo {
+  width: 15%;
+  display: flex;
+  justify-content: space-between; /* Alinha itens horizontalmente com espaço entre */
+  align-items: center; /* Alinha itens verticalmente no centro */
+  padding: 10px 20px; /* Espaçamento dentro do cabeçalho */
+}
+
+.footer-nav-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.footer-nav-item {
+  margin-left: 20px; /* Ou o espaçamento que você achar melhor */
+}
+
+.footer-nav-link {
+  text-decoration: none;
+  /* Adicione qualquer outro estilo que desejar para os links */
+}
+
+
+/* Se você quiser limitar a imagem a uma largura específica, como 500px, use algo assim: */
+.imagem-destacada img {
+  width: 90%; /* Adapta a imagem para a largura do container */
+  max-width: 500px; /* ou qualquer outra largura máxima que desejar */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
