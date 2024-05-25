@@ -1,13 +1,17 @@
 import React from 'react';
+
 import LogoVerde from '../Images/LogoVerde.png';
 import AgnuLogo from '../Images/agnu-removebg-preview.png';
 import AnaBeatrizAlbuquerque from '../Images/0539 - ana beatriz albuquerque.jpeg';
+
 import LeilaSantos from '../Images/IMG_8280 - Leila Santos.jpeg';
 import AnaLuizaMenacho from '../Images/IMG_8273 - Ana Luiza Menacho.jpeg';
 import MarioPereira from '../Images/IMG_8288 - Mario Pereira.jpeg';
 import GiuliaMartins from '../Images/9571 - Giulia Martins.jpg';
+
 import GabriellaNebieker from '../Images/IMG_8595 - Gabriella.jpeg';
 import MariaClaraFerraz from '../Images/IMG_8656 - Maria Clara Ferraz.jpeg';
+
 import insta from '../Images/insta.png';
 import email from '../Images/email.png';
 import linktree from '../Images/linktree.png';

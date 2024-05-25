@@ -6,10 +6,11 @@ import ComiteAgnu from './pages/comiteagnu';
 import ComiteCam from './pages/comitecam';
 import ComiteCcoi from './pages/comiteccoi';
 import ComiteCii from './pages/comitecii';
-import ComiteTpi from './pages/comitecii';
+import ComiteCorte from './pages/comitecorte';
+import ComitePnud from './pages/comitepnud';
+import ComiteTpi from './pages/comitetpi';
 import ComiteUnche from './pages/comiteunche';
 import ComiteUnsc from './pages/comiteunsc';
-import ComiteCorte from './pages/comitecorte';
 
 import './App.css';
 
@@ -24,10 +25,11 @@ function App() {
             <Route exact path='/comitecam' element={<ComiteCam/>}/>
             <Route exact path='/comiteccoi' element={<ComiteCcoi/>}/>
             <Route exact path='/comitecii' element={<ComiteCii/>}/>
+            <Route exact path='/comitecorte' element={<ComiteCorte/>}/>
+            <Route exact path='/comitepnud' element={<ComitePnud/>}/>
             <Route exact path='/comitetpi' element={<ComiteTpi/>}/>
             <Route exact path='/comiteunche' element={<ComiteUnche/>}/>
             <Route exact path='/comiteunsc' element={<ComiteUnsc/>}/>
-            <Route exact path='/comitecorte' element={<ComiteCorte/>}/>
 
           </Routes>
         </Router>

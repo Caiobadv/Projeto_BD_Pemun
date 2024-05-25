@@ -11,7 +11,7 @@ import RobertoMoura from '../Images/IMG_8463 - Roberto Moura.jpeg';
 import VictorMoura from '../Images/IMG_8442 - Vitor Moura.jpeg';
 
 import GabriellaNebieker from '../Images/IMG_8595 - Gabriella.jpeg';
-import HelenaMendes from '../mages/IMG_8627 - Helena Mendes.jpeg';
+import HelenaMendes from '../Images/IMG_8627 - Helena Mendes.jpeg';
 import RafaellaAlmeida from '../Images/WhatsApp Image 2024-05-03 at 16.59.59.jpeg';
 
 import insta from '../Images/insta.png';
