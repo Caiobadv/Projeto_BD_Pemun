@@ -1,0 +1,365 @@
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 20px; /* Espaçamento entre os itens */
+  }
+  
+  /* Estilo dos links do cabeçalho */
+  .navigation-link {
+    color: rgb(23, 23, 23); /* Define a cor do texto para preto */
+    text-decoration: none; /* Remove o sublinhado */
+  }
+  
+  /* Efeito ao passar o mouse */
+  .navigation-link:hover {
+    text-decoration: underline;
+    font-weight: bold; /* Deixa o texto em negrito */
+  }
+  
+  /* Estilo básico dos botões */
+  button {
+    background-color: #055F0E; /* Cor de fundo */
+    border: none;
+    color: orange; /* Cor do texto */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px; /* Bordas arredondadas */
+    transition: box-shadow 0.3s ease; /* Suaviza a transição do brilho */
+  }
+  
+  .button.contato-button {
+    background-color: #055F0E; /* Um verde vivo, ajuste o código de cor conforme desejar */
+    color: white; /* Ajusta a cor do texto para branco para melhor contraste */
+  }
+  
+  /* Efeito de brilho ao passar o mouse nos botões */
+  button:hover {
+    box-shadow: 0 0 15px yellow;
+  }
+  
+  .access-button {
+    display: inline-block;
+    background-color: #FAEBD7;
+    color: #055F0E;
+    padding: 10px 25px;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .content-below-image .access-button {
+    background-color: #FAEBD7; /* Cor rosa pálido */
+    color: #333; /* Cor do texto, se necessário */
+  }
+  
+  /* Reset básico para remover estilos padrão */
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  /* Estilizando o cabeçalho */
+  .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  }
+  
+  .logo {
+  width: 100px;
+  height: auto;
+  }
+  
+  .navigation-list {
+  list-style-type: none;
+  display: flex;
+  }
+  
+  .navigation-item {
+  margin: 0 10px;
+  }
+  
+  .navigation-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  }
+  
+  .contato-button {
+  text-decoration: none;
+  background-color: #055F0E;
+  color: #055F0E; 
+  padding: 15px 25px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  }
+  
+  .contato-button:hover {
+  background-color: #055F0E;
+  }
+  
+  
+  .intro-section {
+  position: relative;
+  text-align: center; /* Center the text */
+  }
+  
+  .intro-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .cor-verde {
+    color: #055F0E;
+  }
+  .comite-section {
+    padding: 20px;
+  }
+  
+  .comite-header {
+    text-align: center;
+  }
+  
+  .comite-logo {
+    max-width: 300px; /* Ajuste o tamanho do logo conforme necessário */
+    margin-bottom: 20px;
+  }
+  
+  .comite-title h1, .comite-title h2 {
+    margin-bottom: 10px;
+  }
+  
+  .comite-buttons {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .guia-button {
+    background-color: #055F0E;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+  
+  .comite-summary {
+    background-color: #055F0E;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .comite-representaciones h2,
+  .comite-directoria h2 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .representaciones-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas de largura igual */
+    gap: 20px; /* Espaço entre as colunas e linhas */
+    padding: 0;
+    margin: 20px auto; /* Centraliza a lista */
+    max-width: 1000px; /* Ajuste a largura máxima conforme necessário */
+    list-style-type: none; /* Remove os marcadores de lista */
+    text-align: center; /* Centraliza o texto dentro de cada item de lista */
+  }
+  
+  .representaciones-list li {
+    margin-bottom: 10px; /* Espaço adicional na parte inferior de cada item */
+  }
+  
+  .comite-directoria {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .directoria-members {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria exatamente 4 colunas */
+    grid-template-rows: repeat(2, auto); /* Cria exatamente 2 linhas, a altura é automática */
+    gap: 20px; /* Espaço entre os itens da grade */
+    justify-content: center; /* Centraliza os itens no container quando eles não preenchem todo o espaço */
+    align-items: center; /* Alinha verticalmente */
+  }
+  
+  .member img {
+    width: 100%; /* Faz com que a imagem preencha o container respeitando os limites abaixo */
+    max-width: 200px; /* Limita a largura máxima da imagem */
+    display: block; /* Evita problemas de alinhamento */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+  }
+  
+  .member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .member h3 {
+    font-size: 1em;
+    margin-top: 8px; 
+  }
+  
+  footer {
+    background: #333;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  
+  .tutores-section {
+    background-color: #055F0E; 
+    color: #ffffff; 
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .tutores-section h2 {
+    margin-bottom: 10px;
+  }
+  
+  .tutores-section p {
+    margin-bottom: 20px;
+  }
+  
+  .tutores-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+  }
+  
+  .tutor {
+    text-align: center; 
+  }
+  
+  .tutor img {
+    width: 100%;
+    max-width: 200px; 
+    height: auto; 
+    margin-bottom: 10px; 
+  }
+  
+  .tutor p {
+    font-size: 1em;
+  }
+  
+    /* Rodapé */
+  
+  
+    .site-footer {
+      padding: 10px 20px;
+      margin: 0 auto;
+      text-align: left;
+      background: #f4f4f4;
+    }
+    
+    
+    .footer-content, .footer-logo-socials, .footer-credits {
+      padding: 5px 10px; 
+      margin: 0; 
+    }
+    
+    .footer-logo-socials .social-icon img {
+      width: 50px; 
+      height: auto; 
+    }
+    
+    
+    .footer-logo-socials {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+    }
+    
+    .social-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      margin-bottom: 0;
+      width: 150px;
+      height: auto;
+      margin-left: 30px;
+    }
+    
+    .footer-credits {
+      text-align: right;
+      margin-bottom: 0;
+      position: relative;
+      bottom: 10px;   
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: right;
+    }
+    
+    .footer-nav {
+      position: absolute;
+      top: 10px; 
+      right: 10px; 
+      display: flex; 
+    }
+    
+    .footer-nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333333;
+    }
+    
+    .footer-logo {
+      width: 15%;
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      padding: 10px 20px;
+    }
+    
+    .footer-nav-list {
+      list-style: none;
+      display: flex;
+      padding: 0;
+    }
+    
+    .footer-nav-item {
+      margin-left: 20px;
+    }
+    
+    .footer-nav-link {
+      text-decoration: none;
+    }
+    
+    
+    .imagem-destacada img {
+      width: 90%; 
+      max-width: 500px;
+      display: block;
+      margin: 0 auto;
+    }

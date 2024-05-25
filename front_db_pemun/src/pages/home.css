@@ -195,7 +195,7 @@ img {
 .about-image {
   width: 50%; 
   height: auto;
-  background: url('Images/Imagem1Carrosel.JPG') no-repeat center center;
+  background: url('../Images/Imagem1Carrosel.JPG') no-repeat center center;
   background-size: cover;
 }
 
