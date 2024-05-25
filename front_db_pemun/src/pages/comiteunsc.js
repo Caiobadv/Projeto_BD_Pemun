@@ -2,7 +2,7 @@ import React from "react";
 
 import LogoVerde from '../Images/LogoVerde.png';
 import UnscLogo from '../Images/unsc_v3__2_-removebg-preview.png';
-import AliciaMaximo from '../Images/Alí­cia Máximo.jpg';
+import AliciaMaximo from '../Images/Alí­cia Máximo.jpg';
 import IsadoraBatista from '../Images/ISADORA BATISTA.jpg';
 import LuccaLimongi from '../Images/IMG_8251 - Lucca Limongi.jpeg';
 import MariaHuergo from '../Images/IMG_8239 - Maria Fernanda Huergo.jpeg';

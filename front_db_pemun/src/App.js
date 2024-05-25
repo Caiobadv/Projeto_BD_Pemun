@@ -7,6 +7,7 @@ import ComiteCam from './pages/comitecam';
 import ComiteCcoi from './pages/comiteccoi';
 import ComiteUnsc from './pages/comiteunsc';
 import ComiteCii from './pages/comitecii';
+import ComiteCorte from './pages/comitecorte';
 
 import './App.css';
 
@@ -22,6 +23,8 @@ function App() {
             <Route exact path='/comiteccoi' element={<ComiteCcoi/>}/>
             <Route exact path='/comiteunsc' element={<ComiteUnsc/>}/>
             <Route exact path='/comitecii' element={<ComiteCii/>}/>
+            <Route exact path='/comitecorte' element={<ComiteCorte/>}/>
+
           </Routes>
         </Router>
       </div>
