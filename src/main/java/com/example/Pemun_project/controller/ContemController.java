@@ -21,7 +21,7 @@ public class ContemController {
         return contemService.getAllContem();
     }
 
-    @GetMapping("/{idPacote}/{idItem}")
+    @GetMapping("Contem/{idPacote}/{idItem}")
     public ResponseEntity<Contem> getContemById(@PathVariable Integer idPacote, @PathVariable Integer idItem) {
         Optional<Contem> contem = contemService.getContemById(idPacote, idItem);
         return contem.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
@@ -33,7 +33,7 @@ public class ContemController {
         return ResponseEntity.ok(contem);
     }
 
-    @PutMapping("/{idPacote}/{idItem}")
+    @PutMapping("Contem/{idPacote}/{idItem}")
     public ResponseEntity<Contem> updateContem(@PathVariable Integer idPacote, @PathVariable Integer idItem, @RequestBody Contem contemDetails) {
         Optional<Contem> contem = contemService.getContemById(idPacote, idItem);
         if (contem.isPresent()) {
@@ -46,7 +46,7 @@ public class ContemController {
         }
     }
 
-    @DeleteMapping("/{idPacote}/{idItem}")
+    @DeleteMapping("Contem/{idPacote}/{idItem}")
     public ResponseEntity<Void> deleteContem(@PathVariable Integer idPacote, @PathVariable Integer idItem) {
         Optional<Contem> contem = contemService.getContemById(idPacote, idItem);
         if (contem.isPresent()) {

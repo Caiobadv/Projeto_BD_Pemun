@@ -20,7 +20,7 @@ public class ItemController {
         return itemService.getAllItems();
     }
 
-    @GetMapping("/{idItem}")
+    @GetMapping("/item/{idItem}")
     public ResponseEntity<Item> getItemById(@PathVariable Integer id) {
         Optional<Item> item = itemService.getItemById(id);
         return item.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
@@ -32,7 +32,7 @@ public class ItemController {
         return ResponseEntity.ok(item);
     }
 
-    @PutMapping("/{idItem}")
+    @PutMapping("/item/{idItem}")
     public ResponseEntity<Item> updateItem(@PathVariable Integer id, @RequestBody Item itemDetails) {
         Optional<Item> item = itemService.getItemById(id);
         if (item.isPresent()) {
@@ -44,7 +44,7 @@ public class ItemController {
         }
     }
 
-    @DeleteMapping("/{idItem}")
+    @DeleteMapping("/item/{idItem}")
     public ResponseEntity<Void> deleteItem(@PathVariable Integer id) {
         Optional<Item> item = itemService.getItemById(id);
         if (item.isPresent()) {

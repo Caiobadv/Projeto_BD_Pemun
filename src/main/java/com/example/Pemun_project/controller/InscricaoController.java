@@ -20,7 +20,7 @@ public class InscricaoController {
         return inscricaoService.getAllInscricoes();
     }
 
-    @GetMapping("/{idI}")
+    @GetMapping("/inscricao/{id}")
     public ResponseEntity<Inscricao> getInscricaoById(@PathVariable Integer id) {
         Optional<Inscricao> inscricao = inscricaoService.getInscricaoById(id);
         return inscricao.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
@@ -32,7 +32,7 @@ public class InscricaoController {
         return ResponseEntity.ok(inscricao);
     }
 
-    @PutMapping("/{idI}")
+    @PutMapping("/inscricao/{id}")
     public ResponseEntity<Inscricao> updateInscricao(@PathVariable Integer id, @RequestBody Inscricao inscricaoDetails) {
         Optional<Inscricao> inscricao = inscricaoService.getInscricaoById(id);
         if (inscricao.isPresent()) {
@@ -44,7 +44,7 @@ public class InscricaoController {
         }
     }
 
-    @DeleteMapping("/{idI}")
+    @DeleteMapping("/inscricao/{id}")
     public ResponseEntity<Void> deleteInscricao(@PathVariable Integer id) {
         Optional<Inscricao> inscricao = inscricaoService.getInscricaoById(id);
         if (inscricao.isPresent()) {

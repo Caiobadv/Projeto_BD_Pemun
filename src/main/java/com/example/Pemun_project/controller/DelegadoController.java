@@ -20,7 +20,7 @@ public class DelegadoController {
         return delegadoService.getAllDelegados();
     }
 
-    @GetMapping("/{cpfD}") // colocar algo antes do cpf, tipo /delegado/cpf
+    @GetMapping("/delegado/{cpf}") // colocar algo antes do cpf, tipo /delegado/cpf
     public ResponseEntity<Delegado> getDelegadoByCpf(@PathVariable Integer cpf) {
         Optional<Delegado> delegado = delegadoService.getDelegadoByCpf(cpf);
         return delegado.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
@@ -32,7 +32,7 @@ public class DelegadoController {
         return ResponseEntity.ok(delegado);
     }
 
-    @PutMapping("/{cpfD}")
+    @PutMapping("delegado/{cpf}")
     public ResponseEntity<Delegado> updateDelegado(@PathVariable Integer cpf, @RequestBody Delegado delegadoDetails) {
         Optional<Delegado> delegado = delegadoService.getDelegadoByCpf(cpf);
         if (delegado.isPresent()) {
@@ -44,7 +44,7 @@ public class DelegadoController {
         }
     }
 
-    @DeleteMapping("/{cpfD}")
+    @DeleteMapping("delegado/{cpf}")
     public ResponseEntity<Void> deleteDelegado(@PathVariable Integer cpf) {
         Optional<Delegado> delegado = delegadoService.getDelegadoByCpf(cpf);
         if (delegado.isPresent()) {

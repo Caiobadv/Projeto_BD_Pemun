@@ -20,7 +20,7 @@ public class CarrinhoController {
         return carrinhoService.getAllCarrinhos();
     }
 
-    @GetMapping("carrinho/{id}")
+    @GetMapping("/carrinho/{id}")
     public ResponseEntity<Carrinho> getCarrinhoById(@PathVariable Integer id) {
         Optional<Carrinho> carrinho = carrinhoService.getCarrinhoById(id);
         return carrinho.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());

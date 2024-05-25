@@ -20,19 +20,19 @@ public class ComiteController {
         return comiteService.getAllComites();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("comite/{id}")
     public ResponseEntity<Comite> getComiteById(@PathVariable Integer id) {
         Optional<Comite> comite = comiteService.getComiteById(id);
         return comite.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping("/comite")
+    @PostMapping("/comitePost")
     public ResponseEntity<Comite> createComite(@RequestBody Comite comite) {
         comiteService.createComite(comite);
         return ResponseEntity.ok(comite);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("comite/{id}")
     public ResponseEntity<Comite> updateComite(@PathVariable Integer id, @RequestBody Comite comiteDetails) {
         Optional<Comite> comite = comiteService.getComiteById(id);
         if (comite.isPresent()) {
@@ -44,7 +44,7 @@ public class ComiteController {
         }
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("comite/{id}")
     public ResponseEntity<Void> deleteComite(@PathVariable Integer id) {
         Optional<Comite> comite = comiteService.getComiteById(id);
         if (comite.isPresent()) {

@@ -20,7 +20,7 @@ public class UsuarioController {
         return usuarioService.getAllUsuarios();
     }
 
-    @GetMapping("/{cpf}")
+    @GetMapping("/usuario/{cpf}")
     public ResponseEntity<Usuario> getUsuarioByCpf(@PathVariable Integer cpf) {
         Optional<Usuario> usuario = usuarioService.getUsuarioByCpf(cpf);
         return usuario.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
@@ -32,7 +32,7 @@ public class UsuarioController {
         return ResponseEntity.ok(usuario);
     }
 
-    @PutMapping("/{cpf}")
+    @PutMapping("/usuario/{cpf}")
     public ResponseEntity<Usuario> updateUsuario(@PathVariable Integer cpf, @RequestBody Usuario usuarioDetails) {
         Optional<Usuario> usuario = usuarioService.getUsuarioByCpf(cpf);
         if (usuario.isPresent()) {
@@ -44,7 +44,7 @@ public class UsuarioController {
         }
     }
 
-    @DeleteMapping("/{cpf}")
+    @DeleteMapping("/usuario/{cpf}")
     public ResponseEntity<Void> deleteUsuario(@PathVariable Integer cpf) {
         Optional<Usuario> usuario = usuarioService.getUsuarioByCpf(cpf);
         if (usuario.isPresent()) {

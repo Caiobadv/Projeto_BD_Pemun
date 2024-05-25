@@ -20,7 +20,7 @@ public class SupervisionaController {
         return supervisionaService.getAllSupervisiona();
     }
 
-    @GetMapping("/{supervisorCpf}/{supervisionadoCpf}")
+    @GetMapping("/supervisiona/{supervisorCpf}/{supervisionadoCpf}")
     public ResponseEntity<Supervisiona> getSupervisionaById(@PathVariable Integer supervisorCpf, @PathVariable Integer supervisionadoCpf) {
         Optional<Supervisiona> supervisiona = supervisionaService.getSupervisionaById(supervisorCpf, supervisionadoCpf);
         return supervisiona.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
@@ -32,7 +32,7 @@ public class SupervisionaController {
         return ResponseEntity.ok(supervisiona);
     }
 
-    @PutMapping("/{supervisorCpf}/{supervisionadoCpf}")
+    @PutMapping("/supervisiona/{supervisorCpf}/{supervisionadoCpf}")
     public ResponseEntity<Supervisiona> updateSupervisiona(@PathVariable Integer supervisorCpf, @PathVariable Integer supervisionadoCpf, @RequestBody Supervisiona supervisionaDetails) {
         Optional<Supervisiona> supervisiona = supervisionaService.getSupervisionaById(supervisorCpf, supervisionadoCpf);
         if (supervisiona.isPresent()) {

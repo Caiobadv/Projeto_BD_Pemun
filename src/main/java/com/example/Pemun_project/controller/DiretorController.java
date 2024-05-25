@@ -20,19 +20,19 @@ public class DiretorController {
         return diretorService.getAllDiretores();
     }
 
-    @GetMapping("/{cpf}/{idComite}")
+    @GetMapping("diretor/{cpf}/{idComite}")
     public ResponseEntity<Diretor> getDiretorById(@PathVariable Integer cpf, @PathVariable Integer idComite) {
         Optional<Diretor> diretor = diretorService.getDiretorById(cpf, idComite);
         return diretor.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping("/diretor")
     public ResponseEntity<Diretor> createDiretor(@RequestBody Diretor diretor) {
         diretorService.createDiretor(diretor);
         return ResponseEntity.ok(diretor);
     }
 
-    @PutMapping("/{cpf}/{idComite}")
+    @PutMapping("/diretor/{cpf}/{idComite}")
     public ResponseEntity<Diretor> updateDiretor(@PathVariable Integer cpf, @PathVariable Integer idComite, @RequestBody Diretor diretorDetails) {
         Optional<Diretor> diretor = diretorService.getDiretorById(cpf, idComite);
         if (diretor.isPresent()) {
@@ -45,7 +45,7 @@ public class DiretorController {
         }
     }
 
-    @DeleteMapping("/{cpf}/{idComite}")
+    @DeleteMapping("/diretor/{cpf}/{idComite}")
     public ResponseEntity<Void> deleteDiretor(@PathVariable Integer cpf, @PathVariable Integer idComite) {
         Optional<Diretor> diretor = diretorService.getDiretorById(cpf, idComite);
         if (diretor.isPresent()) {
