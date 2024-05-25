@@ -7,11 +7,12 @@ import ComiteCam from './pages/comitecam';
 import ComiteCcoi from './pages/comiteccoi';
 import ComiteCii from './pages/comitecii';
 import ComiteCorte from './pages/comitecorte';
+import ComiteEscap from './pages/comiteescap';
 import ComitePnud from './pages/comitepnud';
 import ComiteTpi from './pages/comitetpi';
 import ComiteUnche from './pages/comiteunche';
 import ComiteUnsc from './pages/comiteunsc';
-import ComiteEscap from './pages/comiteescap';
+import Edicao from './pages/edicao';
 import ComiteOnu from './pages/comiteonu';
 
 import './App.css';
@@ -28,11 +29,12 @@ function App() {
             <Route exact path='/comiteccoi' element={<ComiteCcoi/>}/>
             <Route exact path='/comitecii' element={<ComiteCii/>}/>
             <Route exact path='/comitecorte' element={<ComiteCorte/>}/>
+            <Route exact path='/comiteescap' element={<ComiteEscap/>}/>
             <Route exact path='/comitepnud' element={<ComitePnud/>}/>
             <Route exact path='/comitetpi' element={<ComiteTpi/>}/>
             <Route exact path='/comiteunche' element={<ComiteUnche/>}/>
             <Route exact path='/comiteunsc' element={<ComiteUnsc/>}/>
-            <Route exact path='/comiteescap' element={<ComiteEscap/>}/>
+            <Route exact path='/edicao' element={<Edicao/>}/>
             <Route exact path='/comiteonu' element={<ComiteOnu/>}/>
           </Routes>
         </Router>
