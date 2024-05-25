@@ -1,9 +1,10 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
+
 import LogoVerde from '../Images/LogoVerde.png';
-import insta from '../Images/insta.png';
-import email from '../Images/email.png';
-import linktree from '../Images/linktree.png';
 import LogoEscap from '../Images/escap_v7-removebg-preview.png';
+
 import BiancaFarias from '../Images/IMG_8414 - Bianca Farias.jpeg';
 import CamilaVitor from '../Images/IMG_8421 - Camila Vitor.jpeg';
 import IngridPeixoto from '../Images/IMG_8394 - Ingrid Peixoto.jpeg';
@@ -12,6 +13,9 @@ import MariaEduardaJustino from '../Images/IMG_8404 - Maria Eduarda Justino.jpeg
 import WeltonFelix from '../Images/IMG_8368 - Welton Felix.jpeg';
 import MariaEugeniaDubeux from '../Images/IMG_1220 - Maria Eugênia Dubeux.jpeg';
 
+import insta from '../Images/insta.png';
+import email from '../Images/email.png';
+import linktree from '../Images/linktree.png';
 
 import '../App.css';
 import './comiteagnu.css'
@@ -24,10 +28,10 @@ function ComiteEscap(){
                 <img src={LogoVerde} alt="Logo PEMUN" className="logo"/> 
                 <nav className="navigation">
                     <ul className="navigation-list">
-                    <li className="navigation-item"><a href="index.html" className="navigation-link">Home</a></li>
-                    <li className="navigation-item"><a href="edicao.html" className="navigation-link">Edição VI</a></li>
-                    <li className="navigation-item"><a href="arquivos.html" className="navigation-link">Arquivos</a></li> 
-                    <li className="navigation-item"><a href="staff.html" className="navigation-link">Staff</a></li>
+                    <li className="navigation-item"><Link to="/" className="navigation-link">Home</Link></li>
+                    <li className="navigation-item"><Link to="/edicao" className="navigation-link">Edição VI</Link></li>
+                    <li className="navigation-item"><Link to="/arquivos" className="navigation-link">Arquivos</Link></li>
+                    <li className="navigation-item"><Link to="/staff" className="navigation-link">Staff</Link></li>
                     </ul>
                 </nav>
                 <a  href="https://linktr.ee/Pemun" className="button contato-button">Contato</a>

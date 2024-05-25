@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
+
 import LogoVerde from '../Images/LogoVerde.png';
 import Rectangle from '../Images/Rectangle 28 (5).png';
 import arquivo2 from '../Images/arquivo2.png';
@@ -6,6 +9,7 @@ import arquivo3 from '../Images/arquivo3.png';
 import arquivo4 from '../Images/arquivo4.png';
 import arquivo5 from '../Images/arquivo5.png';
 import arquivo6 from '../Images/arquivo6.png';
+
 import insta from '../Images/insta.png';
 import email from '../Images/email.png';
 import linktree from '../Images/linktree.png';
@@ -21,10 +25,10 @@ function Arquivos() {
                     <img src={LogoVerde} alt="Logo PEMUN" className="logo"/> 
                     <nav className="navigation">
                         <ul className="navigation-list">
-                        <li className="navigation-item"><a href="home.html" className="navigation-link">Home</a></li>
-                        <li className="navigation-item"><a href="edicao.html" className="navigation-link">Edição VI</a></li>
-                        <li className="navigation-item"><a href="arquivos.html" className="navigation-link">Arquivos</a></li> 
-                        <li className="navigation-item"><a href="staff.html" className="navigation-link">Staff</a></li>
+                        <li className="navigation-item"><Link to="/" className="navigation-link">Home</Link></li>
+                        <li className="navigation-item"><Link to="/edicao" className="navigation-link">Edição VI</Link></li>
+                        <li className="navigation-item"><Link to="/arquivos" className="navigation-link">Arquivos</Link></li>
+                        <li className="navigation-item"><Link to="/staff" className="navigation-link">Staff</Link></li>
                         </ul>
                     </nav>
                     <a  href="https://linktr.ee/Pemun" className="button contato-button">Contato</a>

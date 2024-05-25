@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import LogoVerde from '../Images/LogoVerde.png';
 import AgnuLogo from '../Images/agnu-removebg-preview.png';
 import AnaBeatrizAlbuquerque from '../Images/0539 - ana beatriz albuquerque.jpeg';
@@ -27,10 +29,10 @@ function ComiteAgnu() {
                 <img src={LogoVerde} alt="Logo PEMUN" className="logo"/> 
                 <nav className="navigation">
                     <ul className="navigation-list">
-                    <li className="navigation-item"><a href="index.html" className="navigation-link">Home</a></li>
-                    <li className="navigation-item"><a href="edicao.html" className="navigation-link">Edição VI</a></li>
-                    <li className="navigation-item"><a href="arquivos.html" className="navigation-link">Arquivos</a></li> 
-                    <li className="navigation-item"><a href="staff.html" className="navigation-link">Staff</a></li>
+                    <li className="navigation-item"><Link to="/" className="navigation-link">Home</Link></li>
+                    <li className="navigation-item"><Link to="/edicao" className="navigation-link">Edição VI</Link></li>
+                    <li className="navigation-item"><Link to="/arquivos" className="navigation-link">Arquivos</Link></li>
+                    <li className="navigation-item"><Link to="/staff" className="navigation-link">Staff</Link></li>
                     </ul>
                 </nav>
                 <a  href="https://linktr.ee/Pemun" className="button contato-button">Contato</a>

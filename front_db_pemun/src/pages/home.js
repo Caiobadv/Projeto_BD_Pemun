@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
+
 import principal from '../Images/principal.jpg';
 import Imagem1 from '../Images/Imagem1Carrosel.JPG';
 import Missao1 from '../Images/missao1.png';
@@ -12,9 +15,8 @@ import LogoUNIT from '../Images/UNIT.png';
 import LogoUFPE from '../Images/FEDERAL.png';
 import LogoFAMUN from '../Images/famun_2024_horizontal-removebg-preview.png';
 import LogoIBMRMUN from '../Images/image-removebg-preview.png';
-
-
 import LogoVerde from '../Images/LogoVerde.png';
+
 import insta from '../Images/insta.png';
 import email from '../Images/email.png';
 import linktree from '../Images/linktree.png';
@@ -31,10 +33,10 @@ function Home() {
             <img src={LogoVerde} alt="Logo PEMUN" className="logo" />
             <nav className="navigation">
               <ul className="navigation-list">
-                <li className="navigation-item"><a href="index.html" className="navigation-link">Home</a></li>
-                <li className="navigation-item"><a href="edicao.html" className="navigation-link">Edição VI</a></li>
-                <li className="navigation-item"><a href="arquivos.html" className="navigation-link">Arquivos</a></li>
-                <li className="navigation-item"><a href="staff.html" className="navigation-link">Staff</a></li>
+                <li className="navigation-item"><Link to="/" className="navigation-link">Home</Link></li>
+                <li className="navigation-item"><Link to="/edicao" className="navigation-link">Edição VI</Link></li>
+                <li className="navigation-item"><Link to="/arquivos" className="navigation-link">Arquivos</Link></li>
+                <li className="navigation-item"><Link to="/staff" className="navigation-link">Staff</Link></li>
               </ul>
             </nav>
             <a href="https://linktr.ee/Pemun" className="button contato-button">Contato</a>
@@ -48,7 +50,7 @@ function Home() {
           <img src={LogoBranco} alt="Background" className="logo" />
           <h2>EDIÇÃO VI</h2>
           <p>2024</p>
-          <a href="staff.html" className="access-button">Acessar</a>
+          <Link to="/edicao" className="access-button">Acessar</Link>
           <p>Confira os materiais da 6ª Edição!</p>
         </div>
 
@@ -57,7 +59,8 @@ function Home() {
             <h2>Quem somos?</h2>
             <h1>Primeiro modelo de simulação das Nações Unidas e organismos internacionais para universitários de Pernambuco</h1>
             <p className="about-paragraph">A partir da vontade de incluir Pernambuco na tradição de simulações, trazendo a oportunidade para a prática de habilidades de diplomacia, oratória, negociação e cooperação internacional, estudantes de Ciência Política e Direito da UFPE se uniram para criar o projeto em 2017, realizando nossa 1ª edição em 2018.</p>
-            <a href="link_para_edicoes_passadas" className="edicoes-passadas">Confira as edições passadas da PEMUN</a>
+            <Link to="/arquivos" className="edicoes-passadas">Confira as edições passadas da PEMUN</Link>
+            
           </div>
           <section id="imagem-destacada" className="imagem-destacada">
             <img src={Imagem1} alt="Descrição da imagem" />
@@ -125,7 +128,8 @@ function Home() {
             </div>
           </div>
           <p>Guias já disponíveis, confira agora!</p>
-          <a href="staff.html" className="access-button">Acessar</a>
+          <Link to="/edicao" className="access-button">Acessar</Link>
+          
         </section>
 
         <section id="partners" className="partners-section">

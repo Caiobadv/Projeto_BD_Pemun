@@ -1,9 +1,10 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
+
 import LogoVerde from '../Images/LogoVerde.png';
-import insta from '../Images/insta.png';
-import email from '../Images/email.png';
-import linktree from '../Images/linktree.png';
 import LogoOnu from '../Images/onu_mulheres-removebg-preview.png';
+
 import AnaBeatrizMarangon from '../Images/IMG_8342 - Ana Beatriz.jpeg';
 import BrunaCalabria from '../Images/IMG_8348 - Bruna Calábria.jpeg';
 import GiovanaFernandes from '../Images/IMG_8308 - Giovana Santos.jpeg';
@@ -12,6 +13,10 @@ import TainaFerreira from '../Images/IMG_8319 - Tainá Ferreira.jpeg';
 import VictoriaKardozo from '../Images/IMG_8358 - Victória Kardozo.jpeg';
 import MarianaTorres from '../Images/IMG_1236 - Mariana Torres.jpeg';
 import MariaEugeniaDubeux from '../Images/IMG_1220 - Maria Eugênia Dubeux.jpeg';
+
+import insta from '../Images/insta.png';
+import email from '../Images/email.png';
+import linktree from '../Images/linktree.png';
 
 import '../App.css';
 import './comiteagnu.css'
@@ -24,10 +29,10 @@ function ComiteOnu(){
                 <img src={LogoVerde} alt="Logo PEMUN" className="logo"/> 
                 <nav className="navigation">
                     <ul className="navigation-list">
-                    <li className="navigation-item"><a href="index.html" className="navigation-link">Home</a></li>
-                    <li className="navigation-item"><a href="edicao.html" className="navigation-link">Edição VI</a></li>
-                    <li className="navigation-item"><a href="arquivos.html" className="navigation-link">Arquivos</a></li> 
-                    <li className="navigation-item"><a href="staff.html" className="navigation-link">Staff</a></li>
+                    <li className="navigation-item"><Link to="/" className="navigation-link">Home</Link></li>
+                    <li className="navigation-item"><Link to="/edicao" className="navigation-link">Edição VI</Link></li>
+                    <li className="navigation-item"><Link to="/arquivos" className="navigation-link">Arquivos</Link></li>
+                    <li className="navigation-item"><Link to="/staff" className="navigation-link">Staff</Link></li>
                     </ul>
                 </nav>
                 <a  href="https://linktr.ee/Pemun" className="button contato-button">Contato</a>

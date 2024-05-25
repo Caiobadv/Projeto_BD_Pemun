@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import LogoVerde from '../Images/LogoVerde.png';
 import PnudLogo from '../Images/pnud-removebg-preview.png';
 
@@ -28,10 +30,10 @@ function ComitePnud() {
                 <img src={LogoVerde} alt="Logo PEMUN" class="logo"/> 
                 <nav class="navigation">
                     <ul class="navigation-list">
-                    <li class="navigation-item"><a href="index.html" class="navigation-link">Home</a></li>
-                    <li class="navigation-item"><a href="edicao.html" class="navigation-link">Edição VI</a></li>
-                    <li class="navigation-item"><a href="arquivos.html" class="navigation-link">Arquivos</a></li> 
-                    <li class="navigation-item"><a href="staff.html" class="navigation-link">Staff</a></li>
+                    <li className="navigation-item"><Link to="/" className="navigation-link">Home</Link></li>
+                    <li className="navigation-item"><Link to="/edicao" className="navigation-link">Edição VI</Link></li>
+                    <li className="navigation-item"><Link to="/arquivos" className="navigation-link">Arquivos</Link></li>
+                    <li className="navigation-item"><Link to="/staff" className="navigation-link">Staff</Link></li>
                     </ul>
                 </nav>
                 <a  href="https://linktr.ee/Pemun" class="button contato-button">Contato</a>
