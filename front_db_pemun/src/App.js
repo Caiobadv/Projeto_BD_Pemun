@@ -5,6 +5,7 @@ import Arquivos from './pages/arquivos'
 import ComiteAgnu from './pages/comiteagnu';
 import ComiteCam from './pages/comitecam';
 import ComiteCcoi from './pages/comiteccoi';
+import ComiteCii from './pages/comitecii';
 
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
             <Route exact path='/comiteagnu' element={<ComiteAgnu/>}/>
             <Route exact path='/comitecam' element={<ComiteCam/>}/>
             <Route exact path='/comiteccoi' element={<ComiteCcoi/>}/>
+            <Route exact path='/comitecii' element={<ComiteCii/>}/>
           </Routes>
         </Router>
       </div>
