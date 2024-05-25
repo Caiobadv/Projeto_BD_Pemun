@@ -69,15 +69,15 @@ function Home() {
           <div className="mission-columns">
             <div className="mission-column">
               <img src={Missao1} alt="Descrição da Imagem 1" />
-              <p>Praticar os aprendizados do ambiente acadêmico, representando diplomatas, juízes internacionais e chefes de Estado, discutindo questões da agenda internacional.</p>
+              <p><br/>Praticar os aprendizados do ambiente acadêmico, representando diplomatas, juízes internacionais e chefes de Estado, discutindo questões da agenda internacional.</p>
             </div>
             <div className="mission-column">
               <img src={Missao2} alt="Descrição da Imagem 2" />
-              <p>Aprender regras e procedimentos específicos de ambientes diplomáticos, inseridos no processo de elaboração de resolução.</p>
+              <p><br/>Aprender regras e procedimentos específicos de ambientes diplomáticos, inseridos no processo de elaboração de resolução.</p>
             </div>
             <div className="mission-column">
               <img src={Missao3} alt="Descrição da Imagem 3" />
-              <p>Desenvolver o raciocínio crítico, a capacidade deliberativa, o senso de trabalho coletivo e habilidades analíticas.</p>
+              <p><br/>Desenvolver o raciocínio crítico, a capacidade deliberativa, o senso de trabalho coletivo e habilidades analíticas.</p>
             </div>
           </div>
           <div className="mission-stats">
