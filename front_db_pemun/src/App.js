@@ -15,7 +15,12 @@ import ComiteUnsc from './pages/comiteunsc';
 import ComiteOnu from './pages/comiteonu';
 import Edicao from './pages/edicao';
 import Staff from './pages/staff';
-import ComiteGab from './pages/comitegab';
+import ComiteGab from './pages/comitegab'
+import Admin from './pages/admin';
+import Produto from './pages/Produto'; 
+import Ingresso from './pages/Ingresso';
+import Pacote from './pages/Pacote';
+import Pedido from './pages/Pedido';
 
 import './App.css';
 
@@ -40,6 +45,11 @@ function App() {
             <Route exact path='/edicao' element={<Edicao/>}/>
             <Route exact path='/staff' element={<Staff/>}/>
             <Route exact path='/comitegab' element={<ComiteGab/>}/>
+            <Route path="/admin" element={<Admin/>}/>
+            <Route path="/admin/produto" element={<Produto/>}/>
+            <Route path="/admin/ingresso" element={<Ingresso/>}/>
+            <Route path="/admin/pacote" element={<Pacote/>}/>
+            <Route path="/admin/pedido" element={<Pedido/>}/>
           </Routes>
         </Router>
       </div>
