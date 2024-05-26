@@ -207,62 +207,86 @@ function Staff() {
                     <div className="committee">
                         <img src={AgnuStaff} alt="Assembleia Geral das Nações Unidas" className="committee-photo"/>
                         <h3 className="committee-name">Assembleia Geral das Nações Unidas (AGNU)</h3>
-                        <button className="info-button" onclick="location.href='comiteagnu.html'">Saiba Mais</button>
+                        <Link to= '/comiteagnu'>
+                            <button className="info-button" onclick="location.href='comiteagnu.html'">Saiba Mais</button>
+                        </Link>
                     </div>
                     <div className="committee">
                         <img src={CamStaff} alt="Comisión de Asuntos Migratorios" className="committee-photo"/>
                         <h3 className="committee-name">Comisión de Asuntos Migratorios (CAM)</h3>
-                        <button className="info-button" onclick="location.href='ComiteCam.html'">Saiba Mais</button>
+                        <Link to= '/comitecam'>
+                            <button className="info-button" onclick="location.href='ComiteCam.html'">Saiba Mais</button>
+                        </Link>
                     </div>
                     <div className="committee">
                         <img src={EscapStaff} alt="Comissão Econômica e Social para a Ásia e o Pacífico(ESCAP)" className="committee-photo"/>
                         <h3 className="committee-name">Comissão Econômica e Social para a Ásia e o Pacífico (ESCAP)</h3>
-                        <button className="info-button" onclick="location.href='ComiteEscap.html'">Saiba Mais</button>
+                        <Link to= '/comiteescap'>
+                            <button className="info-button" onclick="location.href='ComiteEscap.html'">Saiba Mais</button>
+                        </Link>
                     </div>
                     <div className="committee">
                         <img src={CiiStaff} alt="Comitê de Imprensa Internacional (CII)" className="committee-photo"/>
                         <h3 className="committee-name">Comitê de Imprensa Internacional (CII)</h3>
-                        <button className="info-button" onclick="location.href='comitecii.html'">Saiba Mais</button>
+                        <Link to= '/comitecii'>
+                            <button className="info-button" onclick="location.href='comitecii.html'">Saiba Mais</button>
+                        </Link>
                     </div>
                     <div className="committee">
                         <img src={UncheStaff} alt="Conferência das Nações Unidas sobre o Meio Ambiente Humano (UNCHE)" className="committee-photo"/>
                         <h3 className="committee-name">Conferência das Nações Unidas sobre o Meio Ambiente Humano (UNCHE)</h3>
-                        <button className="info-button" onclick="location.href='comiteunche.html'">Saiba Mais</button>
+                        <Link to= '/comiteunche'>
+                            <button className="info-button" onclick="location.href='comiteunche.html'">Saiba Mais</button>
+                        </Link>
                     </div>
                     <div className="committee">
                         <img src={CorteStaff} alt="Corte Interamericana de Direitos Humanos (Corte IDH)" className="committee-photo"/>
                         <h3 className="committee-name">Corte Interamericana de Direitos Humanos (Corte IDH)</h3>
-                        <button className="info-button" onclick="location.href='comitecorte.html'">Saiba Mais</button>
+                        <Link to= '/comitecorte'>
+                            <button className="info-button" onclick="location.href='comitecorte.html'">Saiba Mais</button>
+                        </Link>
                     </div>
                     <div className="committee">
                         <img src={CcoiStaff} alt="Creative Community Outreach Initiative (CCOI)" className="committee-photo"/>
                         <h3 className="committee-name">Creative Community Outreach Initiative (CCOI)</h3>
-                        <button className="info-button" onclick="location.href='comiteccoi.html'">Saiba Mais</button>
+                        <Link to= '/comiteccoi'>
+                            <button className="info-button" onclick="location.href='comiteccoi.html'">Saiba Mais</button>
+                        </Link>
                     </div>
                     <div className="committee">
                         <img src={GabStaff} alt="Gabinete Histórico de Guerra (GAB)" className="committee-photo"/>
                         <h3 className="committee-name">Gabinete Histórico de Guerra (GAB)</h3>
-                        <button className="info-button" onclick="location.href='comitegab.html'">Saiba Mais</button>
+                        <Link to= '/comitegab'>
+                            <button className="info-button" onclick="location.href='comitegab.html'">Saiba Mais</button>
+                        </Link>
                     </div>
                     <div className="committee">
                         <img src={OnuMulheresStaff} alt="Organização das Nações Unidas para Mulheres (ONU Mulheres)" className="committee-photo"/>
                         <h3 className="committee-name">Organização das Nações Unidas para Mulheres (ONU Mulheres)</h3>
-                        <button className="info-button" onclick="location.href='comiteonu.html'">Saiba Mais</button>
+                        <Link to= '/comiteonu'>
+                            <button className="info-button" onclick="location.href='comiteonu.html'">Saiba Mais</button>
+                        </Link>
                     </div>
                     <div className="committee">
                         <img src={PnudStaff} alt="Programa das Nações Unidas para o Desenvolvimento (PNUD)" className="committee-photo"/>
                         <h3 className="committee-name">Programa das Nações Unidas para o Desenvolvimento (PNUD)</h3>
-                        <button className="info-button" onclick="location.href='comitepnud.html'">Saiba Mais</button>
+                        <Link to= '/comitepnud'>
+                            <button className="info-button" onclick="location.href='comitepnud.html'">Saiba Mais</button>
+                        </Link>
                     </div>
                     <div className="committee">
                         <img src={TpiStaff} alt="Tribunal Penal Internacional (TPI)" className="committee-photo"/>
                         <h3 className="committee-name">Tribunal Penal Internacional (TPI)</h3>
-                        <button className="info-button" onclick="location.href='comitetpi.html'">Saiba Mais</button>
+                        <Link to= '/comitetpi'>
+                            <button className="info-button" onclick="location.href='comitetpi.html'">Saiba Mais</button>
+                        </Link>
                     </div>
                     <div className="committee">
                         <img src={UnscStaff} alt="United Nations Security Council (UNSC)" className="committee-photo"/>
                         <h3 className="committee-name">United Nations Security Council (UNSC)</h3>
-                        <button className="info-button" onclick="location.href='comiteunsc.html'">Saiba Mais</button>
+                        <Link to= '/comiteunsc'>
+                            <button className="info-button" onclick="location.href='comiteunsc.html'">Saiba Mais</button>
+                        </Link>
                     </div>
                     </div>
                 </section>
@@ -283,7 +307,7 @@ function Staff() {
                     <p className="cor-verde">© Copyright 2024, All Rights Reserved by PEMUN</p>
                     </div>
                 </div>
-                </footer>
+            </footer>
         </div>
     );
 }
