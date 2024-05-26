@@ -108,10 +108,6 @@ function ComiteGab(){
                         <h3>Alice Lira</h3>
                     </div>
                     <div className="member">
-                        <img src={CamilaFerreira} alt="Camila Ferreira"/>
-                        <h3>Camila Ferreira</h3>
-                    </div>
-                    <div className="member">
                         <img src={JoaoAugustoBarbosa} alt="João Augusto Barbosa"/>
                         <h3>João Augusto Barbosa</h3>
                     </div>
@@ -139,32 +135,39 @@ function ComiteGab(){
                         <img src={SabrinaAraujoVeiga} alt="Sabrina Araújo Veiga"/>
                         <h3>Sabrina Araújo Veiga</h3>
                     </div>
+                    <br/>
                     <div className="member">
                         <img src={ViniciusLauter} alt="Vinicius Lauter"/>
                         <h3>Vinicius Lauter</h3>
                     </div>
+                    <div className="member">
+                        <img src={CamilaFerreira} alt="Camila Ferreira"/>
+                        <h3>Camila Ferreira</h3>
+                    </div>
                     </div>
                 </div>
                 <div className="tutores-section">
-                    <h2>Tutores</h2>
-                    <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
                     <div className="tutores-container">
-                    <div className="tutor">
-                        <img src={MarianaTorres} alt="Mariana Torres"/>
-                        <p>Mariana Torres</p>
-                    </div>
-                    <div className="tutor">
-                        <img src={HelenaMendes} alt="Helena Mendes"/>
-                        <p>Helena Mendes</p>
-                    </div>
-                    <div className="tutor">
-                        <img src={VictorMorais} alt="Victor Morais"/>
-                        <p>Victor Morais</p>
-                    </div>
-                    <div className="tutor">
-                        <img src={LorenaMiranda} alt="Lorena Miranda"/>
-                        <p>Lorena Miranda</p>
-                    </div>
+                        <div align='left'>
+                            <h2>Tutores</h2>
+                            <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={MarianaTorres} alt="Mariana Torres"/>
+                            <p>Mariana Torres</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={HelenaMendes} alt="Helena Mendes"/>
+                            <p>Helena Mendes</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={VictorMorais} alt="Victor Morais"/>
+                            <p>Victor Morais</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={LorenaMiranda} alt="Lorena Miranda"/>
+                            <p>Lorena Miranda</p>
+                        </div>
                     </div>
                 </div>
                 </section>

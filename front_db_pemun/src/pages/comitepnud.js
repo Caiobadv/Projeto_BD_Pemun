@@ -87,6 +87,7 @@ function ComitePnud() {
                         <img src={RafaelAlves} alt="Ana Luisa Porpino"/>
                         <h3>Rafael Alves</h3>
                     </div>
+                    <br/>
                     <div class="member">
                         <img src={FlavioMuniz} alt="Ana Luisa Porpino"/>
                         <h3>Flavio Muniz</h3>
@@ -98,21 +99,23 @@ function ComitePnud() {
                     </div>
                 </div>
                 <div class="tutores-section">
-                    <h2>Tutores</h2>
-                    <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
                     <div class="tutores-container">
-                    <div class="tutor">
-                        <img src={CaioBarreto} alt="Caio Barreto"/>
-                        <p>Caio Barreto</p>
-                    </div>
-                    <div class="tutor">
-                        <img src={MariaDubeux} alt="Maria Eugênia Dubeux"/>
-                        <p>Maria Eugênia Dubeux</p>
-                    </div>
-                    <div class="tutor">
-                        <img src={AnaAlves} alt="Ana Beatriz Alves"/>
-                        <p>Ana Beatriz Alves</p>
-                    </div>
+                        <div align='left'>
+                            <h2>Tutores</h2>
+                            <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
+                        </div>
+                        <div class="tutor">
+                            <img src={CaioBarreto} alt="Caio Barreto"/>
+                            <p>Caio Barreto</p>
+                        </div>
+                        <div class="tutor">
+                            <img src={MariaDubeux} alt="Maria Eugênia Dubeux"/>
+                            <p>Maria Eugênia Dubeux</p>
+                        </div>
+                        <div class="tutor">
+                            <img src={AnaAlves} alt="Ana Beatriz Alves"/>
+                            <p>Ana Beatriz Alves</p>
+                        </div>
                     </div>
                 </div>
                 </section>

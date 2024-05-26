@@ -24,7 +24,7 @@ import email from '../Images/email.png';
 import linktree from '../Images/linktree.png';
 
 import '../App.css';
-import './comiteagnu.css'
+import './edicao.css';
 
 function Edicao() {
     return (
@@ -87,64 +87,88 @@ function Edicao() {
                 <h2 className="comites-title">Confira os comitês que serão simulados!</h2>
                 <div className="comites-grid">
                 <div className="comite-item">
+                    <Link to='/comiteagnu' className='navigation-link'>
                     <img src={AgnuLogo} alt="Assembleia Geral das Nações Unidas"/>
                     <h3>AGNU</h3>
                     <p>Assembleia Geral das Nações Unidas - Ensino Médio</p>
+                    </Link>
                 </div>
                 <div className="comite-item">
+                    <Link to='/comitecam' className='navigation-link'>
                     <img src={CamLogo} alt="Comisión de Asuntos Migratorios"/>
                     <h3>CAM</h3>
                     <p>Comisión de Asuntos Migratorios - Simulado em Espanhol</p>
+                    </Link>
                 </div>
                 <div className="comite-item">
+                    <Link to='/comiteescap' className='navigation-link'>
                     <img src={EscapLogo} alt="Comissão Econômica e Social para a Ásia e o Pacífico"/>
                     <h3>ESCAP</h3>
                     <p>Comissão Econômica e Social para a Ásia e o Pacífico</p>
+                    </Link>
                 </div>
                 <div className="comite-item">
+                    <Link to='/comitecii' className='navigation-link'>
                     <img src={CiiLogo} alt="Comitê de Imprensa Internacional"/>
                     <h3>CII</h3>
                     <p>Comitê de Imprensa Internacional</p>
+                    </Link>
                 </div>
                 <div className="comite-item">
+                    <Link to='/comiteunche' className='navigation-link'>
                     <img src={UncheLogo} alt="Conferência das Nações Unidas sobre o Meio Ambiente Humano"/>
                     <h3>UNCHE</h3>
                     <p>Conferência das Nações Unidas sobre o Meio Ambiente Humano</p>
+                    </Link>
                 </div>
                 <div className="comite-item">
+                    <Link to='/comitecorte' className='navigation-link'>
                     <img src={CorteLogo} alt="Corte Interamericana de Direitos Humanos"/>
                     <h3>CORTE IDH</h3>
                     <p>Corte Interamericana de Direitos Humanos</p>
+                    </Link>
                 </div>
                 <div className="comite-item">
+                    <Link to='/comiteccoi' className='navigation-link'>
                     <img src={CcoiLogo} alt="Creative Community Outreach Initiative"/>
                     <h3>CCOI</h3>
                     <p>Creative Community Outreach Initiative</p>
+                    </Link>
                 </div>
                 <div className="comite-item">
+                    <Link to='/comitegab' className='navigation-link'>
                     <img src={GabLogo} alt="Gabinete Histórico de Guerra"/>
                     <h3>GAB</h3>
                     <p>Gabinete Histórico de Guerra - Gabinete Duplo</p>
+                    </Link>
                 </div>
                 <div className="comite-item">
+                    <Link to='/comiteonu' className='navigation-link'>
                     <img src={OnuMulheresLogo} alt="Organização das Nações Unidas para Mulheres"/>
                     <h3>ONU MULHERES</h3>
                     <p>Organização das Nações Unidas para Mulheres</p>
+                    </Link>
                 </div>
                 <div className="comite-item">
+                    <Link to='/comitepnud' className='navigation-link'>
                     <img src={PnudLogo} alt="Programa das Nações Unidas para o Desenvolvimento"/>
                     <h3>PNUD</h3>
                     <p>Programa das Nações Unidas para o Desenvolvimento - Agregação Cultural</p>
+                    </Link>
                 </div>
                 <div className="comite-item">
+                    <Link to='/comitetpi' className='navigation-link'>
                     <img src={TpiLogo} alt="Tribunal Penal Internacional"/>
                     <h3>TPI</h3>
                     <p>Tribunal Penal Internacional</p>
+                    </Link>
                 </div>
                 <div className="comite-item">
+                    <Link to='/comiteunsc' className='navigation-link'>
                     <img src={UnscLogo} alt="United Nations Security Council"/>
                     <h3>UNSC</h3>
                     <p>United Nations Security Council - Simulado em Inglês</p>
+                    </Link>
                 </div>
                 </div>
             </section>

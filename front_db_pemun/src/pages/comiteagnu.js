@@ -111,17 +111,19 @@ function ComiteAgnu() {
                 </div>
             </div>
             <div className="tutores-section">
-                <h2>Tutores</h2>
-                <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
                 <div className="tutores-container">
-                <div className="tutor">
-                    <img src={GabriellaNebieker} alt="Gabriella Nebieker"/>
-                    <p>Gabriella Nebieker</p>
-                </div>
-                <div className="tutor">
-                    <img src={MariaClaraFerraz} alt="Maria Clara Ferraz"/>
-                    <p>Maria Clara Ferraz</p>
-                </div>
+                    <div align='left'>
+                        <h2>Tutores</h2>
+                        <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
+                    </div>
+                    <div className="tutor">
+                        <img src={GabriellaNebieker} alt="Gabriella Nebieker"/>
+                        <p>Gabriella Nebieker</p>
+                    </div>
+                    <div className="tutor">
+                        <img src={MariaClaraFerraz} alt="Maria Clara Ferraz"/>
+                        <p>Maria Clara Ferraz</p>
+                    </div>
                 </div>
             </div>
             </section>

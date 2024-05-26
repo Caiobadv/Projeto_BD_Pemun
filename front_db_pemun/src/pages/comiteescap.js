@@ -12,6 +12,7 @@ import JuliaLima from '../Images/IMG_8379 - Julia Lima.jpeg';
 import MariaEduardaJustino from '../Images/IMG_8404 - Maria Eduarda Justino.jpeg';
 import WeltonFelix from '../Images/IMG_8368 - Welton Felix.jpeg';
 import MariaEugeniaDubeux from '../Images/IMG_1220 - Maria Eugênia Dubeux.jpeg';
+import MarianaTorres from '../Images/IMG_1236 - Mariana Torres.jpeg';
 
 import insta from '../Images/insta.png';
 import email from '../Images/email.png';
@@ -121,13 +122,19 @@ function ComiteEscap(){
                     </div>
                 </div>
                 <div className="tutores-section">
-                    <h2>Tutores</h2>
-                    <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
                     <div className="tutores-container">
-                    <div className="tutor">
-                        <img src={MariaEugeniaDubeux} alt="Maria Eugênia Dubeux"/>
-                        <p>Maria Eugênia Dubeux</p>
-                    </div>
+                        <div align='left'>
+                            <h2>Tutores</h2>
+                            <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={MariaEugeniaDubeux} alt="Maria Eugênia Dubeux"/>
+                            <p>Maria Eugênia Dubeux</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={MarianaTorres} alt="Mariana Torres"/>
+                            <p>Mariana Torres</p>
+                        </div>
                     </div>
                 </div>
                 </section>

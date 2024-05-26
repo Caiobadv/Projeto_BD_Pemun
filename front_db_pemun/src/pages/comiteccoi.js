@@ -66,6 +66,7 @@ function ComiteCcoi(){
                 <li>5 Delegados para manuseio das câmeras</li>
                 <li>6 Delegados voltados em Técnicos de Som</li>
                 <li>5 Delegados responsáveis para Decupagem/Logger;</li>
+                <br/>
                 <li>5 Delegados realizando a edição</li>
                 <li>1 Entrevistador/ apresentador.</li>
                 </ul>
@@ -92,17 +93,19 @@ function ComiteCcoi(){
                 </div>
             </div>
             <div className="tutores-section">
-                <h2>Tutores</h2>
-                <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
                 <div className="tutores-container">
-                <div className="tutor">
-                    <img src={RicardoAlbuquerque} alt="Ricardo Albuquerque"/>
-                    <p>Ricardo Albuquerque</p>
-                </div>
-                <div className="tutor">
-                    <img src={VitoriaSousa} alt="Vitória Sousa"/>
-                    <p>Vitória Sousa</p>
-                </div>
+                    <div align='left'>
+                        <h2>Tutores</h2>
+                        <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
+                    </div>
+                    <div className="tutor">
+                        <img src={RicardoAlbuquerque} alt="Ricardo Albuquerque"/>
+                        <p>Ricardo Albuquerque</p>
+                    </div>
+                    <div className="tutor">
+                        <img src={VitoriaSousa} alt="Vitória Sousa"/>
+                        <p>Vitória Sousa</p>
+                    </div>
                 </div>
             </div>
             </section>

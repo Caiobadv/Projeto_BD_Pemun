@@ -110,6 +110,7 @@ function ComiteOnu(){
                         <img src={KarineMoura} alt="Karine Moura"/>
                         <h3>Karine Moura</h3>
                     </div>
+                    <br/>
                     <div className="member">
                         <img src={TainaFerreira} alt="Tainá Ferreira"/>
                         <h3>Tainá Ferreira</h3>
@@ -121,17 +122,19 @@ function ComiteOnu(){
                     </div>
                 </div>
                 <div className="tutores-section">
-                    <h2>Tutores</h2>
-                    <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
                     <div className="tutores-container">
-                    <div className="tutor">
-                        <img src={MarianaTorres} alt="Mariana Torres"/>
-                        <p>Mariana Torres</p>
-                    </div>
-                    <div className="tutor">
-                        <img src={MariaEugeniaDubeux} alt="Maria Eugênia Dubeux"/>
-                        <p>Maria Eugênia Dubeux</p>
-                    </div>
+                        <div align='left'>
+                            <h2>Tutores</h2>
+                            <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={MarianaTorres} alt="Mariana Torres"/>
+                            <p>Mariana Torres</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={MariaEugeniaDubeux} alt="Maria Eugênia Dubeux"/>
+                            <p>Maria Eugênia Dubeux</p>
+                        </div>
                     </div>
                 </div>
                 </section>

@@ -92,6 +92,7 @@ function ComiteTpi() {
                         <img src={JuliaPaula} alt="Ana Luisa Porpino"/>
                         <h3>Maria Júlia de Paula</h3>
                     </div>
+                    <br/>
                     <div className="member">
                         <img src={RobertoMoura} alt="Ana Luisa Porpino"/>
                         <h3>Roberto Moura</h3>
@@ -103,21 +104,23 @@ function ComiteTpi() {
                     </div>
                 </div>
                 <div className="tutores-section">
-                    <h2>Tutores</h2>
-                    <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
                     <div className="tutores-container">
-                    <div className="tutor">
-                        <img src={GabriellaNebieker} alt="Gabriella Nebieker"/>
-                        <p>Gabriella Nebieker</p>
-                    </div>
-                    <div className="tutor">
-                        <img src={HelenaMendes} alt="Helena Mendes"/>
-                        <p>Helena Mendes</p>
-                    </div>
-                    <div className="tutor">
-                        <img src={RafaellaAlmeida} alt="Rafaella Almeida"/>
-                        <p>Rafaella Almeida</p>
-                    </div>
+                        <div align='left'>
+                            <h2>Tutores</h2>
+                            <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={GabriellaNebieker} alt="Gabriella Nebieker"/>
+                            <p>Gabriella Nebieker</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={HelenaMendes} alt="Helena Mendes"/>
+                            <p>Helena Mendes</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={RafaellaAlmeida} alt="Rafaella Almeida"/>
+                            <p>Rafaella Almeida</p>
+                        </div>
                     </div>
                 </div>
                 </section>

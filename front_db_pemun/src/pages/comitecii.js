@@ -115,17 +115,19 @@ function ComiteCii(){
                     </div>
                 </div>
                 <div className="tutores-section">
-                    <h2>Tutores</h2>
-                    <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
                     <div className="tutores-container">
-                    <div className="tutor">
-                        <img src={LayssaTavares} alt="Layssa Tavares"/>
-                        <p>Layssa Tavares</p>
-                    </div>
-                    <div className="tutor">
-                        <img src={GabrielBotelho} alt="Gabriel Botelho"/>
-                        <p>Gabriel Botelho</p>
-                    </div>
+                        <div align='left'>
+                            <h2>Tutores</h2>
+                            <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={LayssaTavares} alt="Layssa Tavares"/>
+                            <p>Layssa Tavares</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={GabrielBotelho} alt="Gabriel Botelho"/>
+                            <p>Gabriel Botelho</p>
+                        </div>
                     </div>
                 </div>
                 </section>

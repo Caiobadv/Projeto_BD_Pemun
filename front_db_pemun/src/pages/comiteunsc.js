@@ -104,6 +104,7 @@ function ComiteUnsc() {
                         <img src={LuccaLimongi} alt="Lucca Limongi"/>
                         <h3>Lucca Limongi</h3>
                     </div>
+                    <br/>
                     <div className="member">
                         <img src={MariaHuergo} alt="Maria Fernanda Huergo"/>
                         <h3>Maria Fernanda Huergo</h3>
@@ -115,17 +116,19 @@ function ComiteUnsc() {
                     </div>
                 </div>
                 <div className="tutores-section">
-                    <h2>Tutors</h2>
-                    <p>Members of the Secretariat, Alumini and guests who guided the preparation of the Committee.</p>
                     <div className="tutores-container">
-                    <div className="tutor">
-                        <img src={GabrielBotelho} alt="Gabriel Botelho"/>
-                        <p>Gabriel Botelho</p>
-                    </div>
-                    <div className="tutor">
-                        <img src={ClaraFerraz} alt="Maria Clara Ferraz"/>
-                        <p>Maria Clara Ferraz</p>
-                    </div>
+                        <div align='left'>
+                            <h2>Tutors</h2>
+                            <p>Members of the Secretariat, Alumini and guests who guided the preparation of the Committee.</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={GabrielBotelho} alt="Gabriel Botelho"/>
+                            <p>Gabriel Botelho</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={ClaraFerraz} alt="Maria Clara Ferraz"/>
+                            <p>Maria Clara Ferraz</p>
+                        </div>
                     </div>
                 </div>
                 </section>

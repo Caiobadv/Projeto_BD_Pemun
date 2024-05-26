@@ -68,13 +68,13 @@ function ComiteCorte(){
                 <div className="comite-representaciones">
                     <h2>Representações</h2>
                     <ul className="representaciones-list">
-                    <li>7 (sete) Magistrados:
-
-                        1 Presidente;
-                        1 Vice-presidente;
-                        5 Juízes.</li>
-                    <li>6 (seis) Representantes da Acusação</li>
-                    <li>6 (seis) Advogados(as) de Defesa</li>
+                        <li> <li>7 (sete) Magistrados:</li>
+                            <li>1 Presidente;
+                            1 Vice-presidente;
+                            5 Juízes.</li>
+                        </li>
+                        <li>6 (seis) Representantes da Acusação</li>
+                        <li>6 (seis) Advogados(as) de Defesa</li>
                     </ul>
                 </div>
                 <div className="comite-directoria">
@@ -111,17 +111,19 @@ function ComiteCorte(){
                     </div>
                 </div>
                 <div className="tutores-section">
-                    <h2>Tutores</h2>
-                    <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
                     <div className="tutores-container">
-                    <div className="tutor">
-                        <img src={MariaClaraFerraz} alt="Maria Clara Ferraz"/>
-                        <p>Maria Clara Ferraz</p>
-                    </div>
-                    <div className="tutor">
-                        <img src={VitoriaSouza} alt="Vitória Sousa"/>
-                        <p>Vitória Sousa</p>
-                    </div>
+                        <div align='left'>
+                            <h2>Tutores</h2>
+                            <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={MariaClaraFerraz} alt="Maria Clara Ferraz"/>
+                            <p>Maria Clara Ferraz</p>
+                        </div>
+                        <div className="tutor">
+                            <img src={VitoriaSouza} alt="Vitória Sousa"/>
+                            <p>Vitória Sousa</p>
+                        </div>
                     </div>
                 </div>
                 </section>
