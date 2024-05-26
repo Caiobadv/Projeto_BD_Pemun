@@ -19,10 +19,11 @@ function Comite(){
                 <img src={LogoVerde} alt="Logo PEMUN" class="logo"/> 
                 <nav class="navigation">
                     <ul class="navigation-list">
-                    <li class="navigation-item"><a href="index.html" class="navigation-link">Home</a></li>
-                    <li class="navigation-item"><a href="edicao.html" class="navigation-link">Edição VI</a></li>
-                    <li class="navigation-item"><a href="arquivos.html" class="navigation-link">Arquivos</a></li> 
-                    <li class="navigation-item"><a href="staff.html" class="navigation-link">Staff</a></li>
+                    <li class="navigation-item"><Link to='/' class="navigation-link">Home</Link></li>
+                    <li class="navigation-item"><Link to='/edicao' class="navigation-link">Edição VI</Link></li>
+                    <li class="navigation-item"><Link to='/arquivos' class="navigation-link">Arquivos</Link></li> 
+                    <li class="navigation-item"><Link to='/staff' class="navigation-link">Staff</Link></li>
+                    <li class="navigation-item"><Link to='/loja' class="navigation-link">Nossa Loja</Link></li>
                     </ul>
                 </nav>
                 <a  href="https://linktr.ee/Pemun" class="button contato-button">Contato</a>
