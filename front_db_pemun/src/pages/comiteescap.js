@@ -43,14 +43,14 @@ function ComiteEscap(){
                 <div className="comite-header">
                     <img src={LogoEscap} alt="Logo Comité" className="comite-logo"/>
                     <div className="comite-title">
-                    <h1>Comissão Econômica e Social para a Ásia e o Pacífico</h1>
-                    <h2>Tópico A: Estratégias para a efetivação da Agenda 2030 mediante ao apoio a grupos vulneráveis</h2>
-                    <h2>Tópico B: Os desafios da implementação do Plano Regional de Ação para o HIV</h2>
-                    <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" className="button guia-button">Inscreva-se</a>
-                    <div className="comite-buttons">
-                    {/* <!--  <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" className="button guia-button">Study Guide</a>
-                        <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" className="button guia-button">Annex Guide</a> --> */}
-                    </div>
+                        <h1>Comissão Econômica e Social para a Ásia e o Pacífico</h1>
+                        <h2>Tópico A: Estratégias para a efetivação da Agenda 2030 mediante ao apoio a grupos vulneráveis</h2>
+                        <h2>Tópico B: Os desafios da implementação do Plano Regional de Ação para o HIV</h2>
+                        <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" className="button guia-button">Inscreva-se</a>
+                        <div className="comite-buttons">
+                            <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" className="button guia-button">Guia de Estudos</a>
+                            <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" className="button guia-button">Guia Anexo</a>
+                        </div>
                     </div>
                 </div>
                 <div className="comite-summary">

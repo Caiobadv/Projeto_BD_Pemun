@@ -25,35 +25,35 @@ import './comiteagnu.css'
 function ComitePnud() {
     return (
         <div>
-            <header class="site-header">
-                <div class="header-top">
-                <img src={LogoVerde} alt="Logo PEMUN" class="logo"/> 
-                <nav class="navigation">
-                    <ul class="navigation-list">
+            <header className="site-header">
+                <div className="header-top">
+                <img src={LogoVerde} alt="Logo PEMUN" className="logo"/> 
+                <nav className="navigation">
+                    <ul className="navigation-list">
                     <li className="navigation-item"><Link to="/" className="navigation-link">Home</Link></li>
                     <li className="navigation-item"><Link to="/edicao" className="navigation-link">Edição VI</Link></li>
                     <li className="navigation-item"><Link to="/arquivos" className="navigation-link">Arquivos</Link></li>
                     <li className="navigation-item"><Link to="/staff" className="navigation-link">Staff</Link></li>
                     </ul>
                 </nav>
-                <a  href="https://linktr.ee/Pemun" class="button contato-button">Contato</a>
+                <a  href="https://linktr.ee/Pemun" className="button contato-button">Contato</a>
                 </div>
             </header>
             <main>
-                <section class="comite-section">
-                <div class="comite-header">
-                    <img src={PnudLogo} alt="Logo Comité" class="comite-logo"/>
-                    <div class="comite-title">
-                    <h1>Programa das Nações Unidas para o Desenvolvimento</h1>
-                    <h2>MarathOnu 2030: Cooperação para Paz, Prosperidade, Pessoas e Planeta</h2>
-                    <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" class="button guia-button">Inscreva-se</a>
-                    <div class="comite-buttons">
-                        <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" class="button guia-button">Study Guide</a>
-                        <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" class="button guia-button">Annex Guide</a>
-                    </div>
+                <section className="comite-section">
+                <div className="comite-header">
+                    <img src={PnudLogo} alt="Logo Comité" className="comite-logo"/>
+                    <div className="comite-title">
+                        <h1>Programa das Nações Unidas para o Desenvolvimento</h1>
+                        <h2>MarathOnu 2030: Cooperação para Paz, Prosperidade, Pessoas e Planeta</h2>
+                        <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" className="button guia-button">Inscreva-se</a>
+                        <div className="comite-buttons">
+                            <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" className="button guia-button">Guia de Estudos</a>
+                            <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" className="button guia-button">Guia Anexo</a>
+                        </div>
                     </div>
                 </div>
-                <div class="comite-summary">
+                <div className="comite-summary">
                     <h3>Resumo do Comitê</h3>
                     <p>Os princípios e objetivos do PNUD são baseados na Agenda 2030 para o Desenvolvimento Sustentável (ODS), que visa erradicar a pobreza, proteger o planeta e garantir que todas as pessoas desfrutem de paz e prosperidade.  Uma das características marcantes da atuação do PNUD é o seu foco na inovação, reconhecendo o programa que as soluções tradicionais muitas vezes não são suficientes para resolver os desafios complexos que o mundo enfrenta e, por isso, busca constantemente novas abordagens e tecnologias para enfrentar questões globais.
 
@@ -63,56 +63,56 @@ function ComitePnud() {
                         
                         Durante o evento, terão contato com desafios multidisciplinares, ao trabalharem em áreas abrangentes como paz e justiça, igualdade, prosperidade econômica e preservação do meio ambiente, e equipes diversas, formadas por pessoas de diferentes áreas de expertise, para promover abordagens inovadoras e abrangentes.</p>
                 </div>
-                <div class="comite-representaciones">
+                <div className="comite-representaciones">
                     <h2>Representações</h2>
-                    <ul class="representaciones-list">
+                    <ul className="representaciones-list">
                     <li>Equipe Paz: 5 Delegados;</li>
                     <li>Equipe Prosperidade: 5 Delegados;</li>
                     <li>Equipe Pessoas: 5 Delegados;</li>
                     <li>Equipe Planeta: 5 Delegados</li>
                     </ul>
                 </div>
-                <div class="comite-directoria">
+                <div className="comite-directoria">
                     <h2>Diretoria</h2>
-                    <div class="directoria-members">
-                    <div class="member">
+                    <div className="directoria-members">
+                    <div className="member">
                         <img src={VirnaAmaral} alt="Ana Luisa Porpino"/>
                         <h3>Virna Amaral</h3>
                     </div>
-                    <div class="member">
+                    <div className="member">
                         <img src={FernandaMarques} alt="Ana Luisa Porpino"/>
                         <h3>Maria Fernanda Marques</h3>
                     </div>
-                    <div class="member">
+                    <div className="member">
                         <img src={RafaelAlves} alt="Ana Luisa Porpino"/>
                         <h3>Rafael Alves</h3>
                     </div>
                     <br/>
-                    <div class="member">
+                    <div className="member">
                         <img src={FlavioMuniz} alt="Ana Luisa Porpino"/>
                         <h3>Flavio Muniz</h3>
                     </div>
-                    <div class="member">
+                    <div className="member">
                         <img src={MariliaLascio} alt="Ana Luisa Porpino"/>
                         <h3>Marilia Di Lascio</h3>
                     </div>
                     </div>
                 </div>
-                <div class="tutores-section">
-                    <div class="tutores-container">
+                <div className="tutores-section">
+                    <div className="tutores-container">
                         <div align='left'>
                             <h2>Tutores</h2>
                             <p>Membros do Secretariado, Alumni e convidados que orientaram a elaboração do Comitê.</p>
                         </div>
-                        <div class="tutor">
+                        <div className="tutor">
                             <img src={CaioBarreto} alt="Caio Barreto"/>
                             <p>Caio Barreto</p>
                         </div>
-                        <div class="tutor">
+                        <div className="tutor">
                             <img src={MariaDubeux} alt="Maria Eugênia Dubeux"/>
                             <p>Maria Eugênia Dubeux</p>
                         </div>
-                        <div class="tutor">
+                        <div className="tutor">
                             <img src={AnaAlves} alt="Ana Beatriz Alves"/>
                             <p>Ana Beatriz Alves</p>
                         </div>
@@ -120,20 +120,20 @@ function ComitePnud() {
                 </div>
                 </section>
             </main>
-            <footer class="site-footer">
-                <div class="footer-content">
-                <div class="footer-logo-socials">
-                    <img src={LogoVerde} alt="Logo PEMUN" class="footer-logo"/>
-                    <div class="social-icons">
-                    <a href="https://www.instagram.com/pernambucomun/" class="social-icon"><img src={insta} alt="Instagram"/></a>
-                    <a href="mailto:pernambucomun@gmail.com" class="social-icon"><img src={email} alt="email"/></a>
-                    <a href="https://linktr.ee/Pemun" class="social-icon"><img src={linktree} alt="Linktree"/></a>
+            <footer className="site-footer">
+                <div className="footer-content">
+                <div className="footer-logo-socials">
+                    <img src={LogoVerde} alt="Logo PEMUN" className="footer-logo"/>
+                    <div className="social-icons">
+                    <a href="https://www.instagram.com/pernambucomun/" className="social-icon"><img src={insta} alt="Instagram"/></a>
+                    <a href="mailto:pernambucomun@gmail.com" className="social-icon"><img src={email} alt="email"/></a>
+                    <a href="https://linktr.ee/Pemun" className="social-icon"><img src={linktree} alt="Linktree"/></a>
                     </div>
                 </div>
                 
-                <div class="footer-credits">
+                <div className="footer-credits">
                     <p>Designed and Developed by Ana Beatriz Alves, Caio Barreto e Virna Amaral</p>
-                    <p class="cor-verde">© Copyright 2024, All Rights Reserved by PEMUN</p>
+                    <p className="cor-verde">© Copyright 2024, All Rights Reserved by PEMUN</p>
                 </div>
                 </div>
             </footer>

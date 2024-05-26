@@ -45,14 +45,14 @@ function ComiteCam() {
             <div className="comite-header">
                 <img src={LogoCam} alt="Logo Comité" className="comite-logo"/>
                 <div className="comite-title">
-                <h1>Comisión de Asuntos Migratorios</h1>
-                <h2>Tópico A: Desafíos de la integración socioeconómica de los inmigrantes y refugiados en los países de América</h2>
-                <h2>Tópico B: Crisis migratoria de Venezuela</h2>
-                <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" className="button guia-button">Inscreva-se</a>
-                <div className="comite-buttons">
-                {/* <!--  <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" className="button guia-button">Study Guide</a> */}
-                    {/* <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" className="button guia-button">Annex Guide</a> --> */}
-                </div>
+                    <h1>Comisión de Asuntos Migratorios</h1>
+                    <h2>Tópico A: Desafíos de la integración socioeconómica de los inmigrantes y refugiados en los países de América</h2>
+                    <h2>Tópico B: Crisis migratoria de Venezuela</h2>
+                    <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" className="button guia-button">Inscreva-se</a>
+                    <div className="comite-buttons">
+                        <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" className="button guia-button">Guía de Estudios</a>
+                        <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" className="button guia-button">Guía Adjunto</a>
+                    </div>
                 </div>
             </div>
             <div className="comite-summary">
