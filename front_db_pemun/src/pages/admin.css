@@ -1,0 +1,32 @@
+.admin-container {
+    padding: 20px;
+}
+
+.admin-header {
+    background-color: #f4f4f4;
+    padding: 10px;
+    text-align: center;
+}
+
+.admin-navigation-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.admin-navigation-item {
+    margin: 0 10px;
+}
+
+.admin-navigation-link {
+    color: #055F0E;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.admin-navigation-link:hover {
+    color: #367c2b;
+}
