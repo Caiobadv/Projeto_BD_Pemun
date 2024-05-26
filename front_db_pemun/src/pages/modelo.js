@@ -1,5 +1,9 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
+
 import LogoVerde from '../Images/LogoVerde.png';
+
 import insta from '../Images/insta.png';
 import email from '../Images/email.png';
 import linktree from '../Images/linktree.png';
