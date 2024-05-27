@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
 
 import LogoVerde from '../Images/LogoVerde.png';
 import insta from '../Images/insta.png';
@@ -9,56 +8,73 @@ import email from '../Images/email.png';
 import linktree from '../Images/linktree.png';
 
 import './carrinho.css';
+import '../App.css';
+import './home.css'
 
-function Carrinho () {
+function Carrinho  ({ carrinhoId })
+{
+    const [itens, setItens] = useState([]);
+    const [observacao, setObservacao] = useState('');
 
-    const { userId } = useParams();
-    const [carrinhos, setCarrinhos] = useState([]);
-    const [form, setForm] = useState({ cpf_user: '', product: '', quantity: '' });
-    const [note, setNote] = useState('');
+    const carregarCarrinho = async () => {
+        try {
+        const response = await axios.get(`/carrinho/${carrinhoId}`);
+        setItens(response.data);
+        } catch (error) {
+        console.error("Erro ao carregar o carrinho:", error);
+        }
+    };
+
+    const adicionarAoCarrinho = async (item) => {
+        try {
+        await axios.post(`/carrinho/${carrinhoId}/add`, item);
+        carregarCarrinho();
+        } catch (error) {
+        console.error("Erro ao adicionar ao carrinho:", error);
+        }
+    };
+
+    const removerDoCarrinho = async (itemId) => {
+        try {
+        await axios.delete(`/carrinho/${carrinhoId}/remove`, { params: { itemId } });
+        carregarCarrinho();
+        } catch (error) {
+        console.error("Erro ao remover do carrinho:", error);
+        }
+    };
+    
+    const limparCarrinho = async () => {
+        try {
+          for (const item of itens) {
+            await axios.delete(`/carrinho/${carrinhoId}/remove`, { params: { itemId: item.idItem } });
+          }
+          carregarCarrinho();
+        } catch (error) {
+          console.error("Erro ao limpar o carrinho:", error);
+        }
+      };
+    
+      const atualizarQuantidade = async (itemId, novaQuantidade) => {
+        try {
+            const item = itens.find(item => item.idItem === itemId);
+            
+            if (item)
+            {
+                item.qtdTotalItem = novaQuantidade;
+                await axios.post(`/carrinho/${carrinhoId}/add`, item);
+                carregarCarrinho();
+            }
+        } catch (error) {
+          console.error("Erro ao atualizar a quantidade:", error);
+        }
+    };
 
     useEffect(() => {
-        fetchCarrinhos();
-    }, []);
+        carregarCarrinho();
+    }, [carrinhoId]);
 
-    const fetchCarrinhos = async () => {
-        try {
-        const response = await axios.get(`http://localhost:8080/users/${cpf_user}/carrinhos`);
-        setCarrinhos(response.data);
-        } catch (error) {
-        console.error('Erro ao buscar os carrinhos', error);
-        }
-    };
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setForm({ ...form, [name]: value });
-    };
-
-    const handleAddCarrinho = async () => {
-        try {
-        const response = await axios.post(`http://localhost:8080/users/${cpf_user}/carrinhos`, {
-            product: form.product,
-            quantity: form.quantity
-        });
-        setCarrinhos([...carrinhos, response.data]);
-        setForm({ id: '', product: '', quantity: '' });
-        } catch (error) {
-            console.error('Erro ao adicionar o carrinho', error);
-        }
-    };
-
-    const handleDeleteCarrinho = async (id) => {
-        try {
-            await axios.delete(`http://localhost:8080/users/${cpf_user}/carrinhos/${id}`);
-            setCarrinhos(carrinhos.filter(carrinho => carrinho.id !== id));
-        } catch (error) {
-            console.error('Erro ao deletar o carrinho', error);
-        }
-    };
-
-    const totalQuantity = carrinhos.reduce((acc, curr) => acc + curr.quantity, 0);
-    const totalValue = carrinhos.reduce((acc, curr) => acc + curr.quantity * curr.productPrice, 0).toFixed(2);
+    const quantidadeTotal = itens.reduce((total, item) => total + item.qtdTotalItem, 0);
+    const valorTotal = itens.reduce((total, item) => total + item.precoItem * item.qtdTotalItem, 0);
 
     return (
         <div>
@@ -80,37 +96,39 @@ function Carrinho () {
             </header>
 
             <div className="carrinho-container">
-                <h1>Carrinho</h1>
-                <button className="clear-cart-btn" onClick={() => setCarrinhos([])}>Limpar Carrinho</button>
+                <header>
+                    <button className="clear-cart-btn" onClick={limparCarrinho}>LIMPAR CARRINHO</button>
+                </header>
                 <div className="cart-items">
-                    {carrinhos.map(carrinho => (
-                    <div key={carrinho.id} className="cart-item">
-                        <div className="cart-item-details">
-                        <h2>{carrinho.product}</h2>
-                        <p>{carrinho.productDescription}</p>
-                        <div className="quantity-control">
-                            <button>-</button>
-                            <span>{carrinho.quantity}</span>
-                            <button>+</button>
+                    {itens.map(item => (    //acho que to puxando errado aqui
+                    <div className="cart-item" key={item.id_item}>
+                        <div className="item-image">
+                            <img src="placeholder.png" alt="Produto" />
                         </div>
-                        <p className="item-total">R$ {carrinho.quantity * carrinho.productPrice}</p>
-                        <button className="remove-item-btn" onClick={() => handleDeleteCarrinho(carrinho.id)}>X</button>
+                        <div className="cart-item-details">
+                            <h2>{item.nome_item}</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum ex a erat rhoncus consequat.</p>
+                            <div className="quantity-control">
+                                <button className="quantity-control button" onClick={() => atualizarQuantidade(item.id_item, item.qtd_total_item - 1)}>-</button>
+                                <span>{item.qtd_total_item}</span>
+                                <button className="quantity-control button" onClick={() => atualizarQuantidade(item.id_item, item.qtd_total_item + 1)}>+</button>
+                            </div>
+                                <p className="item-total">R$ {item.preco_item.toFixed(2)}</p>
+                                <button className="remove-item-btn" onClick={() => removerDoCarrinho(item.id_item)}>X</button>
                         </div>
                     </div>
                     ))}
                 </div>
                 <div className="cart-note">
-                    <textarea
-                    placeholder="Alguma observação?"
-                    value={note}
-                    onChange={(e) => setNote(e.target.value)}
-                    maxLength="214"
-                    />
+                    <label>
+                    Alguma observação?
+                    <textarea className="cart-note textarea" value={observacao} onChange={e => setObservacao(e.target.value)} maxLength="214" />
+                    </label>
                 </div>
                 <div className="cart-summary">
-                    <p>Quantidade Total: {totalQuantity}</p>
-                    <p>Valor Total: R$ {totalValue}</p>
-                    <button className="checkout-btn">Fechar Pedido</button>
+                    <p>QUANTIDADE TOTAL: {quantidadeTotal}</p>
+                    <p>VALOR TOTAL: R$ {valorTotal.toFixed(2)}</p>
+                    <button>FECHAR PEDIDO</button>
                 </div>
                 </div>
             

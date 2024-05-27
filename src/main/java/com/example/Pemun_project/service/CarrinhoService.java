@@ -1,6 +1,7 @@
 package com.example.Pemun_project.service;
 
 import com.example.Pemun_project.model.Carrinho;
+import com.example.Pemun_project.model.Item;
 import com.example.Pemun_project.repository.CarrinhoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,11 +27,17 @@ public class CarrinhoService {
         carrinhoRepository.save(carrinho);
     }
 
-    public void updateCarrinho(Carrinho carrinho) {
-        carrinhoRepository.update(carrinho);
+    public Carrinho addItemAoCarrinho(Integer carrinhoId, Item item) {
+        carrinhoRepository.addItemToCarrinho(carrinhoId, item);
+        return carrinhoRepository.findById(carrinhoId).orElseThrow(() -> new RuntimeException("Carrinho não encontrado"));
     }
 
-    public void deleteCarrinho(Integer id) {
-        carrinhoRepository.deleteById(id);
+    public Carrinho removeItemDoCarrinho(Integer carrinhoId, Long itemId) {
+        carrinhoRepository.removeItemFromCarrinho(carrinhoId, itemId);
+        return carrinhoRepository.findById(carrinhoId).orElseThrow(() -> new RuntimeException("Carrinho não encontrado"));
+    }
+
+    public List<Item> getItensByCarrinhoId(Integer carrinhoId) {
+        return carrinhoRepository.findItensByCarrinhoId(carrinhoId);
     }
 }
