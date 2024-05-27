@@ -10,13 +10,13 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/pacotes")
+@CrossOrigin("http://localhost:3000")
 public class PacoteController {
 
     @Autowired
     private PacoteService pacoteService;
 
-    @GetMapping
+    @GetMapping("/pacotes")
     public List<Pacote> getAllPacotes() {
         return pacoteService.getAllPacotes();
     }

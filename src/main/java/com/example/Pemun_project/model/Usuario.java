@@ -16,7 +16,8 @@ public class Usuario {
     private String login_user;
     private String senha_login_user;
     private String email_user;
-    private String telefone_user;
+    private String telefone1_user;
+    private String telefone2_user;
     private String rua_endereco_user;
     private String numero_endereco_user;
     private String bairro_endereco_user;

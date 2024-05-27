@@ -1,0 +1,54 @@
+.produto-container {
+    padding: 20px;
+}
+
+.produto-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.produto-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.produto-form button {
+    padding: 10px;
+    background-color: #055F0E;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.produto-form button:hover {
+    background-color: #367c2b;
+}
+
+.produto-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.produto-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.produto-list button {
+    background-color: #055F0E;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.produto-list button:hover {
+    background-color: darkred;
+}

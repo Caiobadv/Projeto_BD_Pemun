@@ -23,7 +23,7 @@ public class ProdutoRepository {
     }
 
     public Optional<Produto> findById(Integer id) {
-        String sql = "SELECT * FROM Produto WHERE id_item_produto = ?";
+        String sql = "SELECT * FROM Produto WHERE id_produto = ?";
         return jdbcTemplate.query(sql, new Object[]{id}, new ProdutoRowMapper()).stream().findFirst();
     }
 
@@ -38,7 +38,7 @@ public class ProdutoRepository {
     }
 
     public int deleteById(Integer id) {
-        String sql = "DELETE FROM Produto WHERE id_item_produto = ?";
+        String sql = "DELETE FROM Produto WHERE id_produto = ?";
         return jdbcTemplate.update(sql, id);
     }
 
@@ -46,6 +46,7 @@ public class ProdutoRepository {
         @Override
         public Produto mapRow(ResultSet rs, int rowNum) throws SQLException {
             Produto produto = new Produto();
+            produto.setId_produto(rs.getInt("id_produto"));
             produto.setId_item_produto(rs.getInt("id_item_produto"));
             produto.setCor_produto(rs.getString("cor_produto"));
             produto.setTamanho(rs.getString("tamanho"));
