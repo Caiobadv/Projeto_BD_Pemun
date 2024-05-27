@@ -23,7 +23,7 @@ public class PacoteRepository {
     }
 
     public Optional<Pacote> findById(Integer id) {
-        String sql = "SELECT * FROM Pacote WHERE id_item_pacote = ?";
+        String sql = "SELECT * FROM Pacote WHERE id_pacote = ?";
         return jdbcTemplate.query(sql, new Object[]{id}, new PacoteRowMapper()).stream().findFirst();
     }
 
@@ -38,7 +38,7 @@ public class PacoteRepository {
     }
 
     public int deleteById(Integer id) {
-        String sql = "DELETE FROM Pacote WHERE id_item_pacote = ?";
+        String sql = "DELETE FROM Pacote WHERE id_pacote = ?";
         return jdbcTemplate.update(sql, id);
     }
 
@@ -46,6 +46,7 @@ public class PacoteRepository {
         @Override
         public Pacote mapRow(ResultSet rs, int rowNum) throws SQLException {
             Pacote pacote = new Pacote();
+            pacote.setId_pacote(rs.getInt("id_pacote"));
             pacote.setId_item_pacote(rs.getInt("id_item_pacote"));
             return pacote;
         }

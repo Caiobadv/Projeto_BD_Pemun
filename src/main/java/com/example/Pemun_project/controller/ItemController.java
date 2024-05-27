@@ -22,8 +22,8 @@ public class ItemController {
     }
 
     @GetMapping("/item/{idItem}")
-    public ResponseEntity<Item> getItemById(@PathVariable Integer id) {
-        Optional<Item> item = itemService.getItemById(id);
+    public ResponseEntity<Item> getItemById(@PathVariable Integer idItem) {
+        Optional<Item> item = itemService.getItemById(idItem);
         return item.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
@@ -34,10 +34,10 @@ public class ItemController {
     }
 
     @PutMapping("/item/{idItem}")
-    public ResponseEntity<Item> updateItem(@PathVariable Integer id, @RequestBody Item itemDetails) {
-        Optional<Item> item = itemService.getItemById(id);
+    public ResponseEntity<Item> updateItem(@PathVariable Integer idItem, @RequestBody Item itemDetails) {
+        Optional<Item> item = itemService.getItemById(idItem);
         if (item.isPresent()) {
-            itemDetails.setId_item(id);
+            itemDetails.setId_item(idItem);
             itemService.updateItem(itemDetails);
             return ResponseEntity.ok(itemDetails);
         } else {
@@ -46,10 +46,10 @@ public class ItemController {
     }
 
     @DeleteMapping("/item/{idItem}")
-    public ResponseEntity<Void> deleteItem(@PathVariable Integer id) {
-        Optional<Item> item = itemService.getItemById(id);
+    public ResponseEntity<Void> deleteItem(@PathVariable Integer idItem) {
+        Optional<Item> item = itemService.getItemById(idItem);
         if (item.isPresent()) {
-            itemService.deleteItem(id);
+            itemService.deleteItem(idItem);
             return ResponseEntity.noContent().build();
         } else {
             return ResponseEntity.notFound().build();

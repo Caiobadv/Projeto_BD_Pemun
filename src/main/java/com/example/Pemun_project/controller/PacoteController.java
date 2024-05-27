@@ -22,8 +22,8 @@ public class PacoteController {
     }
 
     @GetMapping("/pacotes/{idPacote}")
-    public ResponseEntity<Pacote> getPacoteById(@PathVariable Integer id) {
-        Optional<Pacote> pacote = pacoteService.getPacoteById(id);
+    public ResponseEntity<Pacote> getPacoteById(@PathVariable Integer idPacote) {
+        Optional<Pacote> pacote = pacoteService.getPacoteById(idPacote);
         return pacote.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
@@ -34,10 +34,10 @@ public class PacoteController {
     }
 
     @PutMapping("/pacotes/{idPacote}")
-    public ResponseEntity<Pacote> updatePacote(@PathVariable Integer id, @RequestBody Pacote pacoteDetails) {
-        Optional<Pacote> pacote = pacoteService.getPacoteById(id);
+    public ResponseEntity<Pacote> updatePacote(@PathVariable Integer idPacote, @RequestBody Pacote pacoteDetails) {
+        Optional<Pacote> pacote = pacoteService.getPacoteById(idPacote);
         if (pacote.isPresent()) {
-            pacoteDetails.setId_item_pacote(id);
+            pacoteDetails.setId_item_pacote(idPacote);
             pacoteService.updatePacote(pacoteDetails);
             return ResponseEntity.ok(pacoteDetails);
         } else {
@@ -46,10 +46,10 @@ public class PacoteController {
     }
 
     @DeleteMapping("/pacotes/{idPacote}")
-    public ResponseEntity<Void> deletePacote(@PathVariable Integer id) {
-        Optional<Pacote> pacote = pacoteService.getPacoteById(id);
+    public ResponseEntity<Void> deletePacote(@PathVariable Integer idPacote) {
+        Optional<Pacote> pacote = pacoteService.getPacoteById(idPacote);
         if (pacote.isPresent()) {
-            pacoteService.deletePacote(id);
+            pacoteService.deletePacote(idPacote);
             return ResponseEntity.noContent().build();
         } else {
             return ResponseEntity.notFound().build();

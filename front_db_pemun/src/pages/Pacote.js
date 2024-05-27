@@ -4,9 +4,7 @@ import './Pacote.css';
 
 const Pacote = () => {
     const [pacotes, setPacotes] = useState([]);
-    const [nome, setNome] = useState('');
-    const [descricao, setDescricao] = useState('');
-    const [preco, setPreco] = useState('');
+    const [id_item_pacote, setIdItemPacote] = useState('');
 
     useEffect(() => {
         fetchPacotes();
@@ -19,16 +17,14 @@ const Pacote = () => {
 
     const addPacote = async (e) => {
         e.preventDefault();
-        const newPacote = { nome, descricao, preco };
+        const newPacote = {id_item_pacote};
         await axios.post('http://localhost:8080/pacote', newPacote);
         fetchPacotes();
-        setNome('');
-        setDescricao('');
-        setPreco('');
+        setIdItemPacote('');
     };
 
     const deletePacote = async (id) => {
-        await axios.delete(`http://localhost:8080/produto/${id}`);
+        await axios.delete(`http://localhost:8080/pacotes/${id}`);
         fetchPacotes();
     };
 
@@ -36,33 +32,20 @@ const Pacote = () => {
         <div className="pacote-container">
             <form className="pacote-form" onSubmit={addPacote}>
                 <input 
-                    type="text" 
-                    placeholder="Nome" 
-                    value={nome} 
-                    onChange={(e) => setNome(e.target.value)} 
-                />
-                <input 
-                    type="text" 
-                    placeholder="Descrição" 
-                    value={descricao} 
-                    onChange={(e) => setDescricao(e.target.value)} 
-                />
-                <input 
                     type="number" 
-                    placeholder="Preço" 
-                    value={preco} 
-                    onChange={(e) => setPreco(e.target.value)} 
+                    placeholder="id_item_pacote" 
+                    value={id_item_pacote} 
+                    onChange={(e) => setIdItemPacote(e.target.value)} 
                 />
                 <button type="submit">Adicionar Pacote</button>
             </form>
             <div className="pacote-list">
                 <ul>
                     {pacotes.map((pacote) => (
-                        <li key={pacote.id}>
-                            <span>{pacote.nome}</span>
-                            <span>{pacote.descricao}</span>
-                            <span>{pacote.preco}</span>
-                            <button onClick={() => deletePacote(pacote.id)}>Remover</button>
+                        <li key={pacote.id_pacote}>
+                            <span>{pacote.id_pacote}</span>
+                            <span>{pacote.id_item_pacote}</span>
+                            <button onClick={() => deletePacote(pacote.id_pacote)}>Remover</button>
                         </li>
                     ))}
                 </ul>

@@ -22,6 +22,7 @@ import Ingresso from './pages/Ingresso';
 import Pacote from './pages/Pacote';
 import Pedido from './pages/Pedido';
 import Loja from './pages/loja';
+import Item from './pages/Item';
 
 import './App.css';
 
@@ -51,6 +52,7 @@ function App() {
             <Route path="/admin/ingresso" element={<Ingresso/>}/>
             <Route path="/admin/pacote" element={<Pacote/>}/>
             <Route path="/admin/pedido" element={<Pedido/>}/>
+            <Route path="/admin/item" element={<Item/>}/>
             <Route path="/loja" element={<Loja/>}/>
           </Routes>
         </Router>

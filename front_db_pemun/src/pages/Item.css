@@ -1,0 +1,55 @@
+/* Item.css */
+.item-container {
+    padding: 20px;
+}
+
+.item-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.item-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.item-form button {
+    padding: 10px;
+    background-color: #055F0E;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.item-form button:hover {
+    background-color: #367c2b;
+}
+
+.item-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.item-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.item-list button {
+    background-color: #055F0E;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.item-list button:hover {
+    background-color: darkred;
+}

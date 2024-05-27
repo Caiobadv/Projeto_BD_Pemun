@@ -20,6 +20,9 @@ const Admin = () => {
                         <li className="admin-navigation-item">
                             <Link to="/admin/pedido" className="admin-navigation-link">Pedido</Link>
                         </li>
+                        <li className="admin-navigation-item">
+                            <Link to="/admin/item" className="admin-navigation-link">Item</Link>
+                        </li>
                     </ul>
                 </nav>
             </header>
