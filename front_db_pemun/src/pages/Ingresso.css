@@ -1,0 +1,55 @@
+/* Ingresso.css */
+.ingresso-container {
+    padding: 20px;
+}
+
+.ingresso-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.ingresso-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.ingresso-form button {
+    padding: 10px;
+    background-color: #055F0E;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ingresso-form button:hover {
+    background-color: #367c2b;
+}
+
+.ingresso-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ingresso-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.ingresso-list button {
+    background-color: #055F0E;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ingresso-list button:hover {
+    background-color: darkred;
+}
