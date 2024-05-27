@@ -42,6 +42,7 @@ function Loja(){
                     <li class="navigation-item"><Link to='/arquivos' class="navigation-link">Arquivos</Link></li> 
                     <li className="navigation-item"><Link to="/staff" className="navigation-link">Staff</Link></li>
                     <li class="navigation-item"><Link to='/loja' class="navigation-link">Nossa Loja</Link></li>
+                    <li class="navigation-item"><Link to='/carrinho' class="navigation-link">Carrinho</Link></li>
                     </ul>
                 </nav>
                 <a  href="https://linktr.ee/Pemun" class="button contato-button">Contato</a>

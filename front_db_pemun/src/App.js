@@ -24,6 +24,7 @@ import Pedido from './pages/Pedido';
 import Loja from './pages/loja';
 import Item from './pages/Item';
 import ProdutoDetalhes from './pages/produtodetalhes';
+import Carrinho from './pages/carrinho';
 
 import './App.css';
 
@@ -56,6 +57,7 @@ function App() {
             <Route path="/admin/item" element={<Item/>}/>
             <Route path="/loja" element={<Loja/>}/>
             <Route path="/loja/produto/:id" element={<ProdutoDetalhes/>}/>
+            <Route path="/carrinho" element={<Carrinho/>}/>
           </Routes>
         </Router>
       </div>
