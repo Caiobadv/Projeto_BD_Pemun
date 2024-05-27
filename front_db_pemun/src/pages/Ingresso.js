@@ -4,7 +4,7 @@ import './Ingresso.css';
 
 function Ingresso() {
     const [ingressos, setIngressos] = useState([]);
-    const [newIngresso, setNewIngresso] = useState({ id_ingresso: '', id_produto_ingresso: '', nome_evento_ingresso: '', data_compra_ingresso: ''});
+    const [newIngresso, setNewIngresso] = useState({ id_ingresso: '', id_produto_ingresso: '', nome_evento_ingresso: '', data_compra_ingresso: '', valor_ingresso: ''});
 
     useEffect(() => {
         fetchIngressos();
@@ -12,7 +12,17 @@ function Ingresso() {
 
     const fetchIngressos = async () => {
         const response = await axios.get('http://localhost:8080/ingressos');
-        setIngressos(response.data);
+        const ingressosData = response.data;
+
+        const updatedIngressos = await Promise.all(
+            ingressosData.map(async (ingresso) => {
+                const precoResponse = await axios.get(`http://localhost:8080/ingressos/preco/${ingresso.id_ingresso}`);
+                ingresso.valor_ingresso = precoResponse.data;
+                return ingresso;
+            })
+        );
+
+        setIngressos(updatedIngressos);
     };
 
     const addIngresso = async () => {
@@ -53,7 +63,7 @@ function Ingresso() {
                 <ul>
                     {ingressos.map((ingresso) => (
                         <li key={ingresso.id_ingresso}>
-                            {ingresso.id_produto_ingresso} - {ingresso.nome_evento_ingresso} - {ingresso.data_compra_ingresso}
+                            {ingresso.id_produto_ingresso} - {ingresso.nome_evento_ingresso} - {ingresso.data_compra_ingresso} - ${ingresso.valor_ingresso}
                             <button onClick={() => removeIngresso(ingresso.id_ingresso)}>Remove</button>
                         </li>
                     ))}

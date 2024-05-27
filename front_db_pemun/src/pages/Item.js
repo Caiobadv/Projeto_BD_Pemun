@@ -68,7 +68,6 @@ function Item() {
                         <li key={item.id_item}>
                             {item.nome_item} - ${item.preco_item} - {item.descricao_item} - {item.qtd_total_item}
                             <button onClick={() => removeItem(item.id_item)}>Remove</button>
-                            <button onClick={() => removeItem(item.id_item)}>Editar</button>
                         </li>
                     ))}
                 </ul>
