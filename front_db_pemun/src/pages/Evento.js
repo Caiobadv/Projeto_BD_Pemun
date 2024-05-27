@@ -1,75 +1,98 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './Evento.css';
 
 function Evento() {
   const [eventos, setEventos] = useState([]);
-  const [formData, setFormData] = useState({nome_evento: '', data_evento: '', descricao_evento: '', rua_endereco_evento: '',
+  const [NewEvento, setNewEvento] = useState({nome_evento: '', data_evento: '', descricao_evento: '', rua_endereco_evento: '',
     numero_endereco_evento: '', bairro_endereco_evento: '', cep_endereco_evento: '', complemento_endereco_evento: ''});
 
   useEffect(() => {
-    fetch('/api/eventos')
-      .then(response => response.json())
-      .then(data => setEventos(data));
+    fetchEventos();
   }, []);
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+  const fetchEventos = async () => {
+        const response = await axios.get('http://localhost:8080/eventos');
+        setEventos(response.data);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    fetch('/api/eventos', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formData)
-    })
-    .then(response => response.json())
-    .then(data => {
-      setEventos([...eventos, data]);
-      setFormData({ nome_evento: '', data_evento: '', descricao_evento: '', rua_endereco_evento: '', numero_endereco_evento: '', bairro_endereco_evento: '', cep_endereco_evento: '', complemento_endereco_evento: ''
-      });
-    });
-  };
+  const addEvento = async () => {
+    await axios.post('http://localhost:8080/evento', NewEvento);
+    setNewEvento({nome_evento: '', data_evento: '', descricao_evento: '', rua_endereco_evento: '',
+    numero_endereco_evento: '', bairro_endereco_evento: '', cep_endereco_evento: '', complemento_endereco_evento: ''});
+    fetchEventos();
+};
 
-  const handleDelete = (id) => {
-    fetch(`/api/eventos/${id}`, {
-      method: 'DELETE'
-    })
-    .then(() => {
-      setEventos(eventos.filter(evento => evento.id !== id));
-    });
-  };
+const removeEvento = async (nome_evento) => {
+    await axios.delete(`http://localhost:8080/evento/${nome_evento}`);
+    fetchEventos();
+};
 
   return (
-    <div className="evento-container">
-      <form className="evento-form" onSubmit={handleSubmit}>
-        <input name="nome_evento" placeholder="Nome do Evento" value={formData.nome_evento} onChange={handleChange} />
-        <input name="data_evento" type="date" placeholder="Data do Evento" value={formData.data_evento} onChange={handleChange} />
-        <input name="descricao_evento" placeholder="Descrição do Evento" value={formData.descricao_evento} onChange={handleChange} />
-        <input name="rua_endereco_evento" placeholder="Rua" value={formData.rua_endereco_evento} onChange={handleChange} />
-        <input name="numero_endereco_evento" placeholder="Número" value={formData.numero_endereco_evento} onChange={handleChange} />
-        <input name="bairro_endereco_evento" placeholder="Bairro" value={formData.bairro_endereco_evento} onChange={handleChange} />
-        <input name="cep_endereco_evento" placeholder="CEP" value={formData.cep_endereco_evento} onChange={handleChange} />
-        <input name="complemento_endereco_evento" placeholder="Complemento" value={formData.complemento_endereco_evento} onChange={handleChange} />
-        <button type="submit">Adicionar Evento</button>
-      </form>
-      <div className="evento-list">
-        <ul>
-          {eventos.map(evento => (
-            <li key={evento.id}>
-              {evento.nome_evento} - {evento.data_evento}
-              <button onClick={() => handleDelete(evento.id)}>Remover</button>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-}
+        <div className="evento-container">
+            <div className="evento-form">
+                <input
+                    type="text"
+                    placeholder="nome_evento"
+                    value={NewEvento.nome_evento}
+                    onChange={(e) => setNewEvento({ ...NewEvento, nome_evento: e.target.value })}
+                />
+                <input
+                    type="text"
+                    placeholder="data_evento"
+                    value={NewEvento.data_evento}
+                    onChange={(e) => setNewEvento({ ...NewEvento, data_evento: e.target.value })}
+                />
+                <input
+                    type="text"
+                    placeholder="descricao_evento"
+                    value={NewEvento.descricao_evento}
+                    onChange={(e) => setNewEvento({ ...NewEvento, descricao_evento: e.target.value })}
+                />
+                <input
+                    type="text"
+                    placeholder="rua_endereco_evento"
+                    value={NewEvento.rua_endereco_evento}
+                    onChange={(e) => setNewEvento({ ...NewEvento, rua_endereco_evento: e.target.value })}
+                />
+                <input
+                    type="number"
+                    placeholder="numero_endereco_evento"
+                    value={NewEvento.numero_endereco_evento}
+                    onChange={(e) => setNewEvento({ ...NewEvento, numero_endereco_evento: e.target.value })}
+                />
+                <input
+                    type="text"
+                    placeholder="bairro_endereco_evento"
+                    value={NewEvento.bairro_endereco_evento}
+                    onChange={(e) => setNewEvento({ ...NewEvento, bairro_endereco_evento: e.target.value })}
+                />
+                <input
+                    type="number"
+                    placeholder="cep_endereco_evento"
+                    value={NewEvento.cep_endereco_evento}
+                    onChange={(e) => setNewEvento({ ...NewEvento, cep_endereco_evento: e.target.value })}
+                />
+                <input
+                    type="text"
+                    placeholder="complemento_endereco_evento"
+                    value={NewEvento.complemento_endereco_evento}
+                    onChange={(e) => setNewEvento({ ...NewEvento, complemento_endereco_evento: e.target.value })}
+                />
+                <button onClick={addEvento}>Add Evento</button>
+            </div>
+            <div className="evento-list">
+                <ul>
+                    {eventos.map((eventos) => (
+                        <li key={eventos.nome_evento}>
+                           {eventos.nome_evento} - {eventos.data_evento} - {eventos.descricao_evento} - {eventos.rua_endereco_evento} - {eventos.numero_endereco_evento} - {eventos.bairro_endereco_evento} - {eventos.cep_endereco_evento} - {eventos.complemento_endereco_evento}
+                            <button onClick={() => removeEvento(eventos.nome_evento)}>Remove</button>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+    );
+};
 
 export default Evento;

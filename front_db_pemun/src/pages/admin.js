@@ -23,6 +23,9 @@ const Admin = () => {
                         <li className="admin-navigation-item">
                             <Link to="/admin/item" className="admin-navigation-link">Item</Link>
                         </li>
+                        <li className="admin-navigation-item">
+                            <Link to="/admin/evento" className="admin-navigation-link">Evento</Link>
+                        </li>
                     </ul>
                 </nav>
             </header>
