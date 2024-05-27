@@ -22,9 +22,9 @@ public class CarrinhoRepository {
         return jdbcTemplate.query(sql, new CarrinhoRowMapper());
     }
 
-    public Optional<Carrinho> findById(Integer id) {
+    public Optional<Carrinho> findById(Integer id_carrinho) {
         String sql = "SELECT * FROM Carrinho WHERE id_carrinho = ?";
-        return jdbcTemplate.query(sql, new Object[]{id}, new CarrinhoRowMapper())
+        return jdbcTemplate.query(sql, new Object[]{id_carrinho}, new CarrinhoRowMapper())
                 .stream()
                 .findFirst();
     }
@@ -39,9 +39,9 @@ public class CarrinhoRepository {
         return jdbcTemplate.update(sql, carrinho.getValor_total_carrinho(), carrinho.getQtd_total_itens_carrinho(), carrinho.getId_carrinho());
     }
 
-    public int deleteById(Integer id) {
+    public int deleteById(Integer id_carrinho) {
         String sql = "DELETE FROM Carrinho WHERE id_carrinho = ?";
-        return jdbcTemplate.update(sql, id);
+        return jdbcTemplate.update(sql, id_carrinho);
     }
 
     private static class CarrinhoRowMapper implements RowMapper<Carrinho> {

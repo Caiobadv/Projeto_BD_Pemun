@@ -21,9 +21,9 @@ public class CarrinhoController {
         return carrinhoService.getAllCarrinhos();
     }
 
-    @GetMapping("/carrinho/{id}")
-    public ResponseEntity<Carrinho> getCarrinhoById(@PathVariable Integer id) {
-        Optional<Carrinho> carrinho = carrinhoService.getCarrinhoById(id);
+    @GetMapping("/carrinho/{id_carrinho}")
+    public ResponseEntity<Carrinho> getCarrinhoById(@PathVariable Integer id_carrinho) {
+        Optional<Carrinho> carrinho = carrinhoService.getCarrinhoById(id_carrinho);
         return carrinho.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
@@ -33,11 +33,11 @@ public class CarrinhoController {
         return ResponseEntity.ok(carrinho);
     }
 
-    @PutMapping("carrinho/{id}")
-    public ResponseEntity<Carrinho> updateCarrinho(@PathVariable Integer id, @RequestBody Carrinho carrinhoDetails) {
-        Optional<Carrinho> carrinho = carrinhoService.getCarrinhoById(id);
+    @PutMapping("carrinho/{id_carrinho}")
+    public ResponseEntity<Carrinho> updateCarrinho(@PathVariable Integer id_carrinho, @RequestBody Carrinho carrinhoDetails) {
+        Optional<Carrinho> carrinho = carrinhoService.getCarrinhoById(id_carrinho);
         if (carrinho.isPresent()) {
-            carrinhoDetails.setId_carrinho(id);
+            carrinhoDetails.setId_carrinho(id_carrinho);
             carrinhoService.updateCarrinho(carrinhoDetails);
             return ResponseEntity.ok(carrinhoDetails);
         } else {
@@ -45,11 +45,11 @@ public class CarrinhoController {
         }
     }
 
-    @DeleteMapping("carrinho/{id}")
-    public ResponseEntity<Void> deleteCarrinho(@PathVariable Integer id) {
-        Optional<Carrinho> carrinho = carrinhoService.getCarrinhoById(id);
+    @DeleteMapping("carrinho/{id_carrinho}")
+    public ResponseEntity<Void> deleteCarrinho(@PathVariable Integer id_carrinho) {
+        Optional<Carrinho> carrinho = carrinhoService.getCarrinhoById(id_carrinho);
         if (carrinho.isPresent()) {
-            carrinhoService.deleteCarrinho(id);
+            carrinhoService.deleteCarrinho(id_carrinho);
             return ResponseEntity.noContent().build();
         } else {
             return ResponseEntity.notFound().build();
