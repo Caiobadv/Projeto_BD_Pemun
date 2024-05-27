@@ -21,8 +21,8 @@ function Ingresso() {
         fetchIngressos();
     };
 
-    const removeIngresso = async (id) => {
-        await axios.delete(`http://localhost:8080/ingressos/${id}}`);
+    const removeIngresso = async (id_ingresso) => {
+        await axios.delete(`http://localhost:8080/ingresso/${id_ingresso}`);
         fetchIngressos();
     };
 
@@ -61,6 +61,6 @@ function Ingresso() {
             </div>
         </div>
     );
-}
+};
 
 export default Ingresso;
