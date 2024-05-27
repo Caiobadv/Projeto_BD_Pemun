@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
-// import SearchBar from './searchbar';
+import SearchBar from './searchbar';
 
 import LogoVerde from '../Images/LogoVerde.png';
 import insta from '../Images/insta.png';
@@ -13,22 +14,26 @@ import '../App.css';
 import './comiteagnu.css'
 import './Produto.css';
 
-function Loja(){
+function ProdutoDetalhes(){
+    const { id } = useParams();
+    const [produto, setProduto] = useState(null);
 
-    const [produtos, setProdutos] = useState([]);
-    
     useEffect(() => {
-        fetchProdutos();
+        fetchProduto();
     }, []);
 
-    const fetchProdutos = async () => {
+    const fetchProduto = async () => {
         try {
-            const response = await axios.get('http://localhost:8080/produtos');
-            setProdutos(response.data);
+            const response = await axios.get(`http://localhost:8080/produto/${id}`);
+            setProduto(response.data);
         } catch (error) {
-            console.error('Erro ao buscar produtos', error);
+            console.error('Erro ao buscar produto', error);
         }
     };
+
+    if (!produto) {
+        return <div>Carregando...</div>;
+    }
 
     return(
         <div>
@@ -47,18 +52,17 @@ function Loja(){
                 <a  href="https://linktr.ee/Pemun" class="button contato-button">Contato</a>
                 </div>
             </header>
-            
-            <div className="produto-list">
-            <h2>Produtos</h2>
-            <ul>
-                    {produtos.map((produto) => (
-                        <li key={produto.id_produto}>
-                            <Link to={`/loja/produto/${produto.id_produto}`}>
-                                {produto.id_item_produto} - {produto.cor_produto} - {produto.tamanho}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+
+            <div>
+                <h2>{produto.nome_item}</h2>
+                {produto.preco_item !== undefined ? (
+                    <p>Preço: R$ {produto.preco_item.toFixed(2)}</p>
+                ) : (
+                    <p>Preço: Indisponível</p>
+                )}
+                <p>Descrição: {produto.descricao_item}</p>
+                <p>Cor: {produto.cor_produto}</p>
+                <p>Tamanho: {produto.tamanho}</p>
             </div>
 
             <footer class="site-footer">
@@ -82,4 +86,4 @@ function Loja(){
     );
 }
 
-export default Loja;
+export default ProdutoDetalhes;
