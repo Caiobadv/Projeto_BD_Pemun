@@ -59,6 +59,7 @@ function App() {
             <Route path="/loja" element={<Loja/>}/>
             <Route path="/loja/produto/:id" element={<ProdutoDetalhes/>}/>
             <Route path="/carrinho" element={<Carrinho/>}/>
+            <Route path="/carrinho/:carrinhoId" element={<Carrinho/>}/>
             <Route path="/admin/evento" element={<Evento/>}/>
           </Routes>
         </Router>

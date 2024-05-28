@@ -41,7 +41,7 @@ import email from '../Images/email.png';
 import linktree from '../Images/linktree.png';
 
 import '../App.css';
-import './comiteagnu.css'
+import './staff.css'
 
 function Staff() {
     return (

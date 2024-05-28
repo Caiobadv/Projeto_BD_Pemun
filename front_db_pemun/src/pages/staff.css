@@ -1,0 +1,436 @@
+img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 20px; /* Espaçamento entre os itens */
+  }
+  
+  /* Estilo dos links do cabeçalho */
+  .navigation-link {
+    color: rgb(23, 23, 23); /* Define a cor do texto para preto */
+    text-decoration: none; /* Remove o sublinhado */
+  }
+  
+  /* Efeito ao passar o mouse */
+  .navigation-link:hover {
+    text-decoration: underline;
+    font-weight: bold; /* Deixa o texto em negrito */
+  }
+  
+  /* Estilo básico dos botões */
+  button {
+    background-color: #055F0E; /* Cor de fundo */
+    border: none;
+    color: orange; /* Cor do texto */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px; /* Bordas arredondadas */
+    transition: box-shadow 0.3s ease; /* Suaviza a transição do brilho */
+  }
+  
+  .button.contato-button {
+    background-color: #055F0E; /* Um verde vivo, ajuste o código de cor conforme desejar */
+    color: white; /* Ajusta a cor do texto para branco para melhor contraste */
+  }
+  
+  /* Efeito de brilho ao passar o mouse nos botões */
+  button:hover {
+    box-shadow: 0 0 15px yellow;
+  }
+  
+  .access-button {
+    display: inline-block;
+    background-color: #FAEBD7;
+    color: #055F0E;
+    padding: 10px 25px;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .content-below-image .access-button {
+    background-color: #FAEBD7; /* Cor rosa pálido */
+    color: #333; /* Cor do texto, se necessário */
+  }
+  
+  /* Reset básico para remover estilos padrão */
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  /* Estilizando o cabeçalho */
+  .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  }
+  
+  .logo {
+  width: 100px;
+  height: auto;
+  }
+  
+  .navigation-list {
+  list-style-type: none;
+  display: flex;
+  }
+  
+  .navigation-item {
+  margin: 0 10px;
+  }
+  
+  .navigation-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  }
+  
+  .contato-button {
+  text-decoration: none;
+  background-color: #055F0E;
+  color: #055F0E; 
+  padding: 15px 25px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+  }
+  
+  .contato-button:hover {
+  background-color: #055F0E;
+  }
+  
+  
+  .intro-section {
+  position: relative;
+  text-align: center; /* Center the text */
+  }
+  
+  .intro-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* info evento */
+  #staff {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .section-title {
+      color: #333;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    
+    .staff-container {
+      display: flex;
+      justify-content: space-around;
+      margin: 0 auto;
+      max-width: 1200px;
+      flex-wrap: wrap;
+    }
+    
+    .team-category {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      margin: 10px;
+      padding: 20px;
+      flex-basis: 45%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .team-category .team-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    
+    .team-category h3 {
+      color: #055F0E;
+      margin-bottom: 10px;
+    }
+    
+    .team-category p {
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    @media (max-width: 768px) {
+      .staff-container {
+        flex-direction: column;
+      }
+      
+      .team-category {
+        flex-basis: 100%;
+      }
+      
+      .team-category .team-image img {
+        width: 80%;
+      }
+    }
+    
+    #secretariado {
+      background: #055F0E; /* Ajuste a cor de fundo conforme necessário */
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    
+    .team-title {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    
+    .team-member {
+      background: #fff;
+      border-radius: 8px;
+      color: #333;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .team-photo {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    
+    .team-info {
+      margin-top: 10px;
+    }
+    
+    .member-name {
+      font-size: 1.2em;
+      margin: 5px 0;
+    }
+    
+    .member-role {
+      font-size: 1em;
+      color: #666;
+    }
+    
+    @media (max-width: 768px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+  
+    #diretoria {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .section-title {
+      color: #333;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    
+    .committee-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    
+    .committee {
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .committee-photo {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    
+    .committee-name {
+      color: #055F0E;
+      margin-bottom: 5px;
+    }
+    
+    .info-button {
+      border: none;
+      background-color: #055F0E;
+      color: white;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    /* Media queries para responsividade */
+    @media (max-width: 768px) {
+      .committee-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap; /* Evita que os cartões se quebrem em linhas múltiplas */
+      margin-bottom: 20px;
+    }
+    
+    .team-member {
+      margin: 5px;
+      flex: 0 1 20%; /* Controla a largura dos membros para adaptar-se ao número por linha */
+    }
+    
+    /* Ajustes específicos para as primeiras duas linhas */
+    .row:first-child .team-member {
+      flex-basis: 50%; /* 2 membros na primeira linha */
+    }
+    .row:nth-child(2) .team-member {
+      flex-basis: 25%; /* 4 membros na segunda linha */
+    }
+  /* Rodapé */
+  
+  
+  .site-footer {
+    padding: 10px 20px;
+    margin: 0 auto;
+    text-align: left;
+    background: #f4f4f4;
+  }
+  
+  .cor-verde {
+    color: #055F0E;
+  }
+  
+  
+  .footer-content, .footer-logo-socials, .footer-credits {
+    padding: 5px 10px;  /* Ajusta o padding desses elementos se necessário */
+    margin: 0;  /* Remove margens extras */
+  }
+  
+  .footer-logo-socials .social-icon img {
+    width: 50px; /* ou o tamanho que desejar */
+    height: auto; /* mantém a proporção da imagem */
+  }
+  
+  
+  .footer-logo-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    width: 150px;
+    height: auto;
+    margin-left: 30px;
+  }
+  
+  .footer-credits {
+    text-align: right;
+    margin-bottom: 0;
+    position: relative;
+    bottom: 10px;   
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+  }
+  
+  .footer-nav {
+    position: absolute;
+    top: 10px; /* Ajuste conforme necessário */
+    right: 10px; /* Ajuste conforme necessário */
+    display: flex; /* Isso garantirá que os links fiquem um ao lado do outro */
+  }
+  
+  .footer-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333333; /* Cor do texto dos links */
+  }
+  
+  .footer-logo {
+    width: 15%;
+    display: flex;
+    justify-content: space-between; /* Alinha itens horizontalmente com espaço entre */
+    align-items: center; /* Alinha itens verticalmente no centro */
+    padding: 10px 20px; /* Espaçamento dentro do cabeçalho */
+  }
+  
+  .footer-nav-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+  
+  .footer-nav-item {
+    margin-left: 20px; /* Ou o espaçamento que você achar melhor */
+  }
+  
+  .footer-nav-link {
+    text-decoration: none;
+    /* Adicione qualquer outro estilo que desejar para os links */
+  }
+  
+  
+  /* Se você quiser limitar a imagem a uma largura específica, como 500px, use algo assim: */
+  .imagem-destacada img {
+    width: 90%; /* Adapta a imagem para a largura do container */
+    max-width: 500px; /* ou qualquer outra largura máxima que desejar */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
