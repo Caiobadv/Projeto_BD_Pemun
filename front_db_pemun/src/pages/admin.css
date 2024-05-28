@@ -30,3 +30,11 @@
 .admin-navigation-link:hover {
     color: #367c2b;
 }
+
+.header-top_admin {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+  }

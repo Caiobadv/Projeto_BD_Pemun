@@ -52,7 +52,7 @@ function LoginAdmin(){
                         <input type="password" name="password" id="password" placeholder="password"/>
                     </div>
                     <header>
-                    <button className="clear-cart-btn"><Link to='/admin' className="navigation-link-admin">Login</Link></button>
+                    <button className="button-admin"><Link to='/admin' className="navigation-link-admin">Login</Link></button>
                     </header>
                 </div>
             </div>
