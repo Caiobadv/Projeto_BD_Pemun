@@ -40,7 +40,7 @@ function Home() {
                 <li class="navigation-item"><Link to='/loja' class="navigation-link">Nossa Loja</Link></li>
               </ul>
             </nav>
-            <a href="https://linktr.ee/Pemun" className="button contato-button">Contato</a>
+            <a className="button contato-button"><Link to='/loginAdmin' class="navigation-link-admin">Acesso Admin</Link></a>
           </div>
         </header>
 

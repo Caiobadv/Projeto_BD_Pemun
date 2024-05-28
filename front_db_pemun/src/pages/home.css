@@ -19,11 +19,19 @@ img {
     color: rgb(23, 23, 23); /* Define a cor do texto para preto */
     text-decoration: none; /* Remove o sublinhado */
   }
+
+  .navigation-link-admin {
+    color: rgb(255, 255, 255); /* Define a cor do texto para preto */
+    text-decoration: none; /* Remove o sublinhado */
+  }
   
   /* Efeito ao passar o mouse */
   .navigation-link:hover {
     text-decoration: underline;
     font-weight: bold; /* Deixa o texto em negrito */
+  }
+  .navigation-link-admin:hover {
+    text-decoration: underline;
   }
   
   /* Estilo básico dos botões */

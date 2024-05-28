@@ -26,6 +26,7 @@ import Item from './pages/Item';
 import ProdutoDetalhes from './pages/produtodetalhes';
 import Carrinho from './pages/carrinho';
 import Evento from './pages/Evento';
+import LoginAdmin from './pages/loginAdmin';
 
 import './App.css';
 
@@ -61,6 +62,7 @@ function App() {
             <Route path="/carrinho" element={<Carrinho/>}/>
             <Route path="/carrinho/:carrinhoId" element={<Carrinho/>}/>
             <Route path="/admin/evento" element={<Evento/>}/>
+            <Route path="/loginAdmin" element={<LoginAdmin/>}/>
           </Routes>
         </Router>
       </div>

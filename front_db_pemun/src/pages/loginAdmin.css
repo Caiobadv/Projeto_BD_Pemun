@@ -1,0 +1,81 @@
+input {
+    width: 80%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid silver;
+    outline: none;
+    color: #3d3d3d;
+    padding-left: 3px;
+}
+
+button {
+    cursor: pointer;
+    width: 120px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background: slateblue;
+}
+
+.p-admin {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+.container-admin {
+    width:max-content;
+    height:auto;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 0px 0px 6px -1px #000000; 
+    box-shadow: 0px 0px 6px -1px #000000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}   
+
+    .container-admin .banner {
+        width: 520px;
+        height: 520px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background: #007323;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-admin .box-login {
+        width: 386px;
+        height: 520px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background: #fff;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .box-login .box {
+            width: 80%;
+            height: 248px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .box-login .box-account {
+            width: 80%;
+            height: 360px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
