@@ -12,18 +12,23 @@ import java.util.Optional;
 @RestController
 @CrossOrigin("http://localhost:3000")
 public class IngressoController {
-
+    
     @Autowired
     private IngressoService ingressoService;
-
+    
     @GetMapping("/ingressos")
     public List<Ingresso> getAllIngressos() {
         return ingressoService.getAllIngressos();
     }
-
-    @GetMapping("/ingresso/{idProduto}/{nomeEvento}")
-    public ResponseEntity<Ingresso> getIngressoById(@PathVariable Integer idProduto, @PathVariable String nomeEvento) {
-        Optional<Ingresso> ingresso = ingressoService.getIngressoById(idProduto, nomeEvento);
+    
+    @GetMapping("/ingressos/preco/{id_ingresso}")
+    public float findPrice(@PathVariable Integer id_ingresso) {
+        return ingressoService.findPrice(id_ingresso);
+    }
+    
+    @GetMapping("/ingresso/{id_ingresso}")
+    public ResponseEntity<Ingresso> getIngressoById(@PathVariable Integer id_ingresso) {
+        Optional<Ingresso> ingresso = ingressoService.getIngressoById(id_ingresso);
         return ingresso.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
@@ -33,11 +38,11 @@ public class IngressoController {
         return ResponseEntity.ok(ingresso);
     }
 
-    @PutMapping("/ingresso/{idProduto}/{nomeEvento}")
-    public ResponseEntity<Ingresso> updateIngresso(@PathVariable Integer idProduto, @PathVariable String nomeEvento, @RequestBody Ingresso ingressoDetails) {
-        Optional<Ingresso> ingresso = ingressoService.getIngressoById(idProduto, nomeEvento);
+    @PutMapping("/ingresso/{id_ingresso}")
+    public ResponseEntity<Ingresso> updateIngresso(@PathVariable Integer id_ingresso, @PathVariable String nomeEvento, @RequestBody Ingresso ingressoDetails) {
+        Optional<Ingresso> ingresso = ingressoService.getIngressoById(id_ingresso);
         if (ingresso.isPresent()) {
-            ingressoDetails.setId_produto_ingresso(idProduto);
+            ingressoDetails.setId_produto_ingresso(id_ingresso);
             ingressoDetails.setNome_evento_ingresso(nomeEvento);
             ingressoService.updateIngresso(ingressoDetails);
             return ResponseEntity.ok(ingressoDetails);
@@ -46,14 +51,15 @@ public class IngressoController {
         }
     }
 
-    @DeleteMapping("/ingresso/{idProduto}/{nomeEvento}")
-    public ResponseEntity<Void> deleteIngresso(@PathVariable Integer idProduto, @PathVariable String nomeEvento) {
-        Optional<Ingresso> ingresso = ingressoService.getIngressoById(idProduto, nomeEvento);
+    @DeleteMapping("/ingresso/{id_ingresso}")
+    public ResponseEntity<Void> deleteIngresso(@PathVariable Integer id_ingresso) {
+        Optional<Ingresso> ingresso = ingressoService.getIngressoById(id_ingresso);
         if (ingresso.isPresent()) {
-            ingressoService.deleteIngresso(idProduto, nomeEvento);
+            ingressoService.deleteIngresso(id_ingresso);
             return ResponseEntity.noContent().build();
         } else {
             return ResponseEntity.notFound().build();
         }
     }
+    
 }

@@ -40,18 +40,32 @@ public class CarrinhoRepository {
         }
     }
 
-    public void addItemToCarrinho(Integer carrinhoId, Item item) {
-        String sql = "INSERT INTO Item (id_item, nome_item, qtd_total_item, preco_item, id_carrinho) VALUES (?, ?, ?, ?, ?)";
-        jdbcTemplate.update(sql, item.getId_item(), item.getNome_item(), item.getQtd_total_item(), item.getPreco_item(), carrinhoId);
+    public void addItemToCarrinho(Integer carrinhoId, Item item, int qtdItem) {
+        String sqlCheckItem = "SELECT COUNT(*) FROM Item WHERE id_item = ?";
+        int count = jdbcTemplate.queryForObject(sqlCheckItem, new Object[]{item.getId_item()}, Integer.class);
+        if (count > 0) {
+            String sqlCheckCarrinhoItem = "SELECT COUNT(*) FROM CarrinhoItem WHERE id_carrinho = ? AND id_item = ?";
+            int countCarrinhoItem = jdbcTemplate.queryForObject(sqlCheckCarrinhoItem, new Object[]{carrinhoId, item.getId_item()}, Integer.class);
+            if (countCarrinhoItem > 0) {
+                String sqlUpdate = "UPDATE CarrinhoItem SET qtd_item = qtd_item + ? WHERE id_carrinho = ? AND id_item = ?";
+                jdbcTemplate.update(sqlUpdate, qtdItem, carrinhoId, item.getId_item());
+            } else {
+                String sqlInsert = "INSERT INTO CarrinhoItem (id_carrinho, id_item, qtd_item) VALUES (?, ?, ?)";
+                jdbcTemplate.update(sqlInsert, carrinhoId, item.getId_item(), qtdItem);
+            }
+        } else {
+            throw new RuntimeException("Item não encontrado no banco de dados");
+        }
     }
 
-    public void removeItemFromCarrinho(Integer carrinhoId, Long itemId) {
-        String sql = "DELETE FROM Item WHERE id_carrinho = ? AND id_item = ?";
+    public void removeItemFromCarrinho(Integer carrinhoId, Integer itemId) {
+        String sql = "DELETE FROM CarrinhoItem WHERE id_carrinho = ? AND id_item = ?";
         jdbcTemplate.update(sql, carrinhoId, itemId);
     }
 
     public List<Item> findItensByCarrinhoId(Integer carrinhoId) {
-        String sql = "SELECT * FROM Item WHERE id_carrinho = ?";
+        String sql = "SELECT i.id_item, i.nome_item, i.qtd_total_item, i.descricao_item, i.preco_item, ci.qtd_item FROM Item i " +
+                     "JOIN CarrinhoItem ci ON i.id_item = ci.id_item WHERE ci.id_carrinho = ?";
         return jdbcTemplate.query(sql, new Object[]{carrinhoId}, new ItemRowMapper());
     }
 
@@ -78,7 +92,9 @@ public class CarrinhoRepository {
             item.setId_item(rs.getInt("id_item"));
             item.setNome_item(rs.getString("nome_item"));
             item.setQtd_total_item(rs.getInt("qtd_total_item"));
+            item.setDescricao_item(rs.getString("descricao_item"));
             item.setPreco_item(rs.getFloat("preco_item"));
+            item.setQtd_total_item(rs.getInt("qtd_item"));
             return item;
         }
     }

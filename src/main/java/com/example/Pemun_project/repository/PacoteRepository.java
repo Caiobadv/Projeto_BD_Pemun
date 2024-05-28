@@ -22,9 +22,9 @@ public class PacoteRepository {
         return jdbcTemplate.query(sql, new PacoteRowMapper());
     }
 
-    public Optional<Pacote> findById(Integer id) {
+    public Optional<Pacote> findById(Integer id_ingresso) {
         String sql = "SELECT * FROM Pacote WHERE id_pacote = ?";
-        return jdbcTemplate.query(sql, new Object[]{id}, new PacoteRowMapper()).stream().findFirst();
+        return jdbcTemplate.query(sql, new Object[]{id_ingresso}, new PacoteRowMapper()).stream().findFirst();
     }
 
     public int save(Pacote pacote) {

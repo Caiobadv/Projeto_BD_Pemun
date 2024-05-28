@@ -18,8 +18,8 @@ public class IngressoService {
         return ingressoRepository.findAll();
     }
 
-    public Optional<Ingresso> getIngressoById(Integer idProduto, String nomeEvento) {
-        return ingressoRepository.findById(idProduto, nomeEvento);
+    public Optional<Ingresso> getIngressoById(Integer id_ingresso) {
+        return ingressoRepository.findById(id_ingresso);
     }
 
     public void createIngresso(Ingresso ingresso) {
@@ -30,7 +30,10 @@ public class IngressoService {
         ingressoRepository.update(ingresso);
     }
 
-    public void deleteIngresso(Integer idProduto, String nomeEvento) {
-        ingressoRepository.deleteById(idProduto, nomeEvento);
+    public void deleteIngresso(Integer id_ingresso) {
+        ingressoRepository.deleteById(id_ingresso);
+    }
+    public float findPrice(Integer id_ingresso) {
+        return ingressoRepository.findPrice(id_ingresso);
     }
 }

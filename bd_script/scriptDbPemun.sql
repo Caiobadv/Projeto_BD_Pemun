@@ -3,7 +3,7 @@ use PEMUN_DBPROJECT;
 
 CREATE TABLE Usuario (
 	cpf_user integer PRIMARY KEY,
-	tipo_user varchar(1) NOT NULL, # D=Default e A=Adm
+	tipo_user varchar(1) NOT NULL,
 	nome_user varchar(100),
 	instituicao_ensino_user varchar(50),
 	curso_user varchar(50),
@@ -35,7 +35,7 @@ CREATE TABLE Delegado (
 );
 
 CREATE TABLE Inscricao (
-	id_inscricao integer PRIMARY KEY,
+	id_inscricao integer auto_increment PRIMARY KEY,
 	data_inscricao timestamp,
 	valor_inscricao float, # adicionei isso
 	forma_pagamento_inscricao varchar(20),
@@ -68,7 +68,7 @@ CREATE TABLE supervisiona (
 );
 
 CREATE TABLE Item (
-	id_item integer PRIMARY KEY,
+	id_item integer auto_increment PRIMARY KEY,
 	nome_item varchar(100),
 	qtd_total_item integer,
 	descricao_item varchar(200),
@@ -133,6 +133,16 @@ CREATE TABLE compra (
 	CONSTRAINT Fk_id_itens_compra FOREIGN KEY(id_itens_compra) REFERENCES Item(id_item) on DELETE cascade
 );
 
+CREATE TABLE CarrinhoItem (
+    id_carrinho INT,
+    id_item INT,
+    qtd_item INT,
+    PRIMARY KEY (id_carrinho, id_item),
+    FOREIGN KEY (id_carrinho) REFERENCES Carrinho(id_carrinho) ON DELETE CASCADE,
+    FOREIGN KEY (id_item) REFERENCES Item(id_item) ON DELETE CASCADE
+);
+
+
 INSERT INTO Inscricao (id_inscricao, data_inscricao, valor_inscricao, forma_pagamento_inscricao, op1_representacao_inscricao, op2_representacao_inscricao, op3_representacao_inscricao)
 VALUES (10, CURRENT_TIMESTAMP, 100.50, 'Credit Card', 'Representation 1', 'Representation 2', 'Representation 3');
 
@@ -154,8 +164,8 @@ VALUES (789012, 1);
 INSERT INTO supervisiona (cpf_diretor_supervisor, cpf_diretor_supervisionado)
 VALUES (123456, 789012);
 
-INSERT INTO Item (id_item, nome_item, qtd_total_item, descricao_item, preco_item)
-VALUES (11, 'Item Exemplo', 100, 'Descrição do item exemplo', 10.99);
+INSERT INTO Item (nome_item, qtd_total_item, descricao_item, preco_item)
+VALUES ('Copo_Mengao', 8, 'copo dos campeoes', 159.99);
 
 INSERT INTO Usuario (cpf_user, tipo_user, nome_user, instituicao_ensino_user, curso_user, login_user, senha_login_user, email_user, telefone1_user, telefone2_user, rua_endereco_user, numero_endereco_user, bairro_endereco_user, cep_endereco_user, complemento_endereco_user)
 VALUES (123456789, 'D', 'João Silva', 'Universidade XYZ', 'Engenharia', 'joaosilva', 'senha123', 'joao.silva@exemplo.com', '123456789', '987654321', 'Rua A', '123', 'Bairro B', 12345678, 'Apto 1');
@@ -197,6 +207,9 @@ INSERT INTO Produto (id_item_produto, cor_produto, tamanho)
 VALUES (2, 'verde', 'g');
 
 INSERT INTO Produto (id_item_produto, cor_produto, tamanho)
+VALUES (1, 'vermelha', 'u');
+
+INSERT INTO Produto (id_item_produto, cor_produto, tamanho)
 VALUES (2, 'vermelho', 'p');
 
 INSERT INTO contem (id_pacote_contem, id_item_contido)
@@ -213,3 +226,5 @@ VALUES (2, 150.00, 3);
 
 INSERT INTO compra (qtd_itens_compra, cpf_user_compra, id_carrinho_compra, id_itens_compra)
 VALUES (3, 123456789, 2, 2);
+
+INSERT INTO Carrinho (id_carrinho, valor_total_carrinho, qtd_total_itens_carrinho) VALUES (1, 0, 0);

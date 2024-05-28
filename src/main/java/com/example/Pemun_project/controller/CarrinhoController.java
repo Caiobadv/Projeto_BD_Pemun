@@ -35,17 +35,20 @@ public class CarrinhoController {
     }
 
     @PostMapping("/{carrinhoId}/add")
-    public Carrinho addItemAoCarrinho(@PathVariable Integer carrinhoId, @RequestBody Item item) {
-        return carrinhoService.addItemAoCarrinho(carrinhoId, item);
+    public ResponseEntity<Carrinho> addItemAoCarrinho(@PathVariable Integer carrinhoId, @RequestBody Item item, @RequestParam int qtdItem) {
+        Carrinho carrinho = carrinhoService.addItemAoCarrinho(carrinhoId, item, qtdItem);
+        return ResponseEntity.ok(carrinho);
     }
 
     @DeleteMapping("/{carrinhoId}/remove")
-    public Carrinho removeItemDoCarrinho(@PathVariable Integer carrinhoId, @RequestParam Long itemId) {
-        return carrinhoService.removeItemDoCarrinho(carrinhoId, itemId);
+    public ResponseEntity<Carrinho> removeItemDoCarrinho(@PathVariable Integer carrinhoId, @RequestParam Integer itemId) {
+        Carrinho carrinho = carrinhoService.removeItemDoCarrinho(carrinhoId, itemId);
+        return ResponseEntity.ok(carrinho);
     }
 
     @GetMapping("/{carrinhoId}")
-    public List<Item> getItensByCarrinhoId(@PathVariable Integer carrinhoId) {
-        return carrinhoService.getItensByCarrinhoId(carrinhoId);
+    public ResponseEntity<List<Item>> getItensByCarrinhoId(@PathVariable Integer carrinhoId) {
+        List<Item> itens = carrinhoService.getItensByCarrinhoId(carrinhoId);
+        return ResponseEntity.ok(itens);
     }
 }

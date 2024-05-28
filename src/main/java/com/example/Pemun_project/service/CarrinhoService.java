@@ -27,12 +27,12 @@ public class CarrinhoService {
         carrinhoRepository.save(carrinho);
     }
 
-    public Carrinho addItemAoCarrinho(Integer carrinhoId, Item item) {
-        carrinhoRepository.addItemToCarrinho(carrinhoId, item);
+    public Carrinho addItemAoCarrinho(Integer carrinhoId, Item item, int qtdItem) {
+        carrinhoRepository.addItemToCarrinho(carrinhoId, item, qtdItem);
         return carrinhoRepository.findById(carrinhoId).orElseThrow(() -> new RuntimeException("Carrinho não encontrado"));
     }
 
-    public Carrinho removeItemDoCarrinho(Integer carrinhoId, Long itemId) {
+    public Carrinho removeItemDoCarrinho(Integer carrinhoId, Integer itemId) {
         carrinhoRepository.removeItemFromCarrinho(carrinhoId, itemId);
         return carrinhoRepository.findById(carrinhoId).orElseThrow(() -> new RuntimeException("Carrinho não encontrado"));
     }
