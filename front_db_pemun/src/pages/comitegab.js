@@ -55,8 +55,8 @@ function ComiteGab(){
                         <h2>Tópico Único: Guerra do Vietnam</h2>
                         <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" className="button guia-button">Inscreva-se</a>
                         <div className="comite-buttons">
-                            <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" className="button guia-button">Guia de Estudos</a>
-                            <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" className="button guia-button">Guia Anexo</a>
+                            <a href="https://drive.google.com/drive/folders/1QZXCaHddI3JYq1bpvWxD-Qp49BVYDZ0h?usp=share_link" className="button guia-button">Guia de Estudos</a>
+                            <a href="https://drive.google.com/drive/folders/1ygXRxxoEauBGScPOtqNcggnQdges2rv8?usp=share_link" className="button guia-button">Guia Anexo</a>
                         </div>
                     </div>
                 </div>

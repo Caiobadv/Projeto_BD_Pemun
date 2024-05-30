@@ -49,8 +49,8 @@ function ComiteEscap(){
                         <h2>Tópico B: Os desafios da implementação do Plano Regional de Ação para o HIV</h2>
                         <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" className="button guia-button">Inscreva-se</a>
                         <div className="comite-buttons">
-                            <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" className="button guia-button">Guia de Estudos</a>
-                            <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" className="button guia-button">Guia Anexo</a>
+                            <a href="https://drive.google.com/drive/folders/17oJLbMQRQULaWA6JQKFFZID02UodKZxn?usp=share_link" className="button guia-button">Guia de Estudos</a>
+                            <a href="https://drive.google.com/drive/folders/1nz-0dEXRkM07hhJkangThqdt0-wFj8I-?usp=share_link" className="button guia-button">Guia Anexo</a>
                         </div>
                     </div>
                 </div>

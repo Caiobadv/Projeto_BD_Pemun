@@ -49,8 +49,8 @@ function ComiteOnu(){
                         <h2>Tópico B: A violação dos direitos humanos das mulheres no Irã.</h2>
                         <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" className="button guia-button">Inscreva-se</a>
                         <div className="comite-buttons">
-                            <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" className="button guia-button">Guia de Estudos</a>
-                            <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" className="button guia-button">Guia Anexo</a>
+                            <a href="https://drive.google.com/drive/folders/19cBv6agiinH9RwjXp2tWxbTTfsIlHN9k?usp=share_link" className="button guia-button">Guia de Estudos</a>
+                            <a href="https://drive.google.com/drive/folders/1PyP2lUYCAOTb3CessDe0MZKJ8VsXCRqa?usp=share_link" className="button guia-button">Guia Anexo</a>
                         </div>
                     </div>
                 </div>

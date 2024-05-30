@@ -51,8 +51,8 @@ function ComiteTpi() {
                     <h2>Caso B: Promotoria v. Bemba</h2>
                     <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" className="button guia-button">Inscreva-se</a>
                     <div className="comite-buttons">
-                        <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" className="button guia-button">Guia de Estudos</a>
-                        <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" className="button guia-button">Guia Procedimental</a>
+                        <a href="https://drive.google.com/drive/folders/1B3d2d7j72vu7jgBrjNeXIu5I0B3Bm_nD?usp=share_link" className="button guia-button">Guia de Estudos</a>
+                        <a href="https://drive.google.com/drive/folders/1Z-4tTE3xQLxMNYB8VmSpCJTAZPTjskvs?usp=share_link" className="button guia-button">Guia Procedimental</a>
                     </div>
                     </div>
                 </div>
