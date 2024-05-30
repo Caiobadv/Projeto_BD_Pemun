@@ -78,12 +78,13 @@ function Edicao() {
                             <span className="date">07/07</span>
                             <div className="event">Festa de Encerramento</div>
                         </div>
+                    </div>
                         <div className="event-signup-button">
                             <a href="https://www.sympla.com.br/pemun-edicao-vi--simulacao-presencial__2453687" className="button signup-button">INSCREVA-SE</a>
                         </div>                
-                    </div>
                 </div>
             </section>
+
             <section className="comites">
                 <h2 className="comites-title">Confira os comitês que serão simulados!</h2>
                 <div className="comites-grid">

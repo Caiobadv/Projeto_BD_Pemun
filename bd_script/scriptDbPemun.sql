@@ -3,7 +3,7 @@ use PEMUN_DBPROJECT;
 
 CREATE TABLE Usuario (
 	cpf_user integer PRIMARY KEY,
-	tipo_user varchar(1) NOT NULL,
+	tipo_user varchar(1) NOT NULL DEFAULT 'D',
 	nome_user varchar(100),
 	instituicao_ensino_user varchar(50),
 	curso_user varchar(50),
@@ -26,7 +26,8 @@ CREATE TABLE Comite (
 	tema1_comite varchar(200) NOT NULL,
 	tema2_comite varchar(200),
 	descricao_comite varchar(300),
-	qtd_vagas_comite integer
+	qtd_vagas_comite integer,
+	UNIQUE(nome_comite)
 );
 
 CREATE TABLE Delegado (
@@ -72,7 +73,8 @@ CREATE TABLE Item (
 	nome_item varchar(100),
 	qtd_total_item integer,
 	descricao_item varchar(200),
-	preco_item float
+	preco_item float,
+	CHECK(preco_item > 0)
 );
 
 CREATE TABLE Pacote (
@@ -105,8 +107,23 @@ CREATE TABLE Evento (
 	numero_endereco_evento varchar(20),
 	bairro_endereco_evento varchar(50),
 	cep_endereco_evento integer,
-	complemento_endereco_evento varchar(50)
+	complemento_endereco_evento varchar(50),
+	UNIQUE(nome_evento)
 );
+
+DELIMITER //
+
+CREATE TRIGGER event_trg_date
+BEFORE INSERT ON Evento
+FOR EACH ROW
+BEGIN
+	if new.data_evento <= DATE_ADD(CURRENT_TIMESTAMP, INTERVAL 1 DAY) THEN 
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'ERRO: A data do Evento deve ser, ao mínimo, 1 dia após a atual';
+	end if;
+END; //
+
+DELIMITER ;
 
 CREATE TABLE Ingresso (
 	id_ingresso integer auto_increment PRIMARY KEY,

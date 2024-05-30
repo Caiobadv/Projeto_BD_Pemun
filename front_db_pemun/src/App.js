@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Home from './pages/home';
 import Arquivos from './pages/arquivos'
 import ComiteAgnu from './pages/comiteagnu';

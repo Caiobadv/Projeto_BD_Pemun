@@ -53,7 +53,7 @@ function Ingresso() {
                 />
                 <input
                     type="text"
-                    placeholder="data_compra_ingresso"
+                    placeholder="data_registro_ingresso"
                     value={newIngresso.data_compra_ingresso}
                     onChange={(e) => setNewIngresso({ ...newIngresso, data_compra_ingresso: e.target.value })}
                 />

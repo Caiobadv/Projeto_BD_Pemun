@@ -51,8 +51,8 @@ function ComiteCam() {
                     <h2>Tópico B: Crisis migratoria de Venezuela</h2>
                     <a href="https://www.sympla.com.br/evento/pemun-edicao-vi-simulacao-presencial/2453687" className="button guia-button">Inscreva-se</a>
                     <div className="comite-buttons">
-                        <a href="https://drive.google.com/drive/folders/10VLNm0incqFMv8UwBVacvfu6B6z2KDUe?usp=share_link" className="button guia-button">Guía de Estudios</a>
-                        <a href="https://drive.google.com/drive/folders/1XNfE3BtoJEyay2ZMs4AgcY9xo30gPNmb?usp=share_link" className="button guia-button">Guía Adjunto</a>
+                        <a href="https://drive.google.com/drive/folders/1Evim9AaBrGk5F8grDMWHYglDornLeQcW?usp=share_link" className="button guia-button">Guía de Estudios</a>
+                        <a href="https://drive.google.com/drive/folders/1nd6jEYxkSIDKOI2EVI3OoxKJ3yfYntwW?usp=share_link" className="button guia-button">Guía Adjunto</a>
                     </div>
                 </div>
             </div>
