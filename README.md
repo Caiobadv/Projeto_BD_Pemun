@@ -4,6 +4,28 @@ Projeto desenvolvido para a disciplina de Modelagem e Projeto de Banco de Dados,
 Este projeto foi desenvolvido com o objetivo de aplicar os conceitos aprendidos em sala de aula. Foi incluído uma série de requisitos específicos, que foram implementados para demonstrar o conhecimento em modelagem de banco de dados, criação de consultas, integração entre FrontEnd e BackEnd, e configuração de segurança.
 
 Dessa forma, o seguinte repositório abrange o processo desde a criação de um MiniMundo até a modelagem conceitual, lógica e física, passando por validações em cada fase. As tecnologias utilizadas incluem Java com Spring Boot para o BackEnd, React para o FrontEnd, e MySQL como banco de dados.
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="sql icon"/>
+    </td>
+    <td align="center">
+      <img src="https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white" alt="intellij icon"/>
+    <td align="center">
+      <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="react icon"/>
+    </td>
+    </td>
+    <td align="center">
+      <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="javascript icon"/>
+    </td>
+    <td align="center">
+      <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="css icon"/>
+    </td>
+    <td align="center">
+        <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="java icon"/>
+      </td>
+  </tr>
+</table>
 
 ## 💻 Devs:
 <table>
