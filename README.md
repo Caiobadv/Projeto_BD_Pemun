@@ -66,14 +66,14 @@ Dessa forma, o seguinte repositório abrange o processo desde a criação de um 
 - Consultas SQL ![Badge Feito](https://img.shields.io/badge/STATUS-FEITO-green)
 - Ter no mínimo 8 entidades ![Badge Feito](https://img.shields.io/badge/STATUS-FEITO-green)
 - Conceitos obrigatórios ![Badge Feito](https://img.shields.io/badge/STATUS-FEITO-green)
-  - Atributo composto
-  - Atributo multivalorado
-  - Cardinalidades diversas
-  - Atributo de relacionamento
-  - Auto-relacionamento
-  - Agregação ou ternário
-  - Entidade fraca
-  - Herança
+  - Atributo composto ☑️
+  - Atributo multivalorado ☑️
+  - Cardinalidades diversas ☑️
+  - Atributo de relacionamento ☑️
+  - Auto-relacionamento ☑️
+  - Agregação ou ternário ☑️
+  - Entidade fraca ☑️
+  - Herança ☑️
 - Extra: usar outros conceitos, como: check, default, unique, na criação do BD ![Badge Feito](https://img.shields.io/badge/STATUS-FEITO-green)
 
 - Realizar comandos no banco 
